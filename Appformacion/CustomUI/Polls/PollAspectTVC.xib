@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BentonSansBBVA-Book.otf">
+            <string>BentonSansBBVA-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PollAspectTVC" id="NrY-vH-vw7" customClass="PollAspectTVC" customModule="Appformacion" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NrY-vH-vw7" id="5er-0G-5n1">
+                <rect key="frame" x="0.0" y="0.0" width="341" height="73.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAm-Nx-zVa">
+                        <rect key="frame" x="0.0" y="0.0" width="341" height="73.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-8C-Odk">
+                                <rect key="frame" x="80" y="15" width="43.5" height="43.5"/>
+                                <color key="backgroundColor" name="6_BBVA400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0fg-8C-Odk" secondAttribute="height" multiplier="1:1" id="9cl-DZ-Ikj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbj-yr-9Cr">
+                                <rect key="frame" x="133.5" y="10" width="197.5" height="18"/>
+                                <fontDescription key="fontDescription" name="BentonSansBBVA-Book" family="Benton Sans BBVA" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CM-VX-VcI">
+                                <rect key="frame" x="133.5" y="45" width="197.5" height="18"/>
+                                <fontDescription key="fontDescription" name="BentonSansBBVA-Book" family="Benton Sans BBVA" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2CM-VX-VcI" secondAttribute="bottom" constant="10" id="5Im-D8-I2v"/>
+                            <constraint firstItem="0fg-8C-Odk" firstAttribute="leading" secondItem="OAm-Nx-zVa" secondAttribute="leading" constant="80" id="5p5-1X-2Ta"/>
+                            <constraint firstItem="2CM-VX-VcI" firstAttribute="leading" secondItem="0fg-8C-Odk" secondAttribute="trailing" constant="10" id="H0c-bJ-AOP"/>
+                            <constraint firstAttribute="trailing" secondItem="mbj-yr-9Cr" secondAttribute="trailing" constant="10" id="Ojb-dB-rkg"/>
+                            <constraint firstAttribute="bottom" secondItem="0fg-8C-Odk" secondAttribute="bottom" constant="15" id="fI1-7d-tnp"/>
+                            <constraint firstItem="mbj-yr-9Cr" firstAttribute="leading" secondItem="0fg-8C-Odk" secondAttribute="trailing" constant="10" id="j9q-Bl-2Uv"/>
+                            <constraint firstAttribute="trailing" secondItem="2CM-VX-VcI" secondAttribute="trailing" constant="10" id="pf9-Lg-hes"/>
+                            <constraint firstItem="mbj-yr-9Cr" firstAttribute="top" secondItem="OAm-Nx-zVa" secondAttribute="top" constant="10" id="qcv-IR-JfT"/>
+                            <constraint firstItem="0fg-8C-Odk" firstAttribute="centerY" secondItem="OAm-Nx-zVa" secondAttribute="centerY" id="v4A-fN-INj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="OAm-Nx-zVa" secondAttribute="trailing" id="B2P-sn-wWU"/>
+                    <constraint firstItem="OAm-Nx-zVa" firstAttribute="top" secondItem="5er-0G-5n1" secondAttribute="top" id="D74-p3-jrb"/>
+                    <constraint firstAttribute="bottom" secondItem="OAm-Nx-zVa" secondAttribute="bottom" id="OV9-2g-zfa"/>
+                    <constraint firstItem="OAm-Nx-zVa" firstAttribute="leading" secondItem="5er-0G-5n1" secondAttribute="leading" id="kAv-Dy-cZC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgCircle" destination="0fg-8C-Odk" id="OyT-Qz-sHG"/>
+                <outlet property="lblAspect" destination="mbj-yr-9Cr" id="45i-KS-rad"/>
+                <outlet property="lblTeacher" destination="2CM-VX-VcI" id="plY-hR-LJa"/>
+            </connections>
+            <point key="canvasLocation" x="400.5" y="-29"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="6_BBVA400">
+            <color red="0.74099999666213989" green="0.74099999666213989" blue="0.74099999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

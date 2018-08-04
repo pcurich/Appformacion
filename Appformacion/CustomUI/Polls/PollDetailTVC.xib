@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BentonSansBBVA-Bold.otf">
+            <string>BentonSansBBVA-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="ozs-Bt-CGl" customClass="PollDetailTVC" customModule="Appformacion" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ozs-Bt-CGl" id="o94-lh-1ia">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formacion de Asesores con per" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTC-Tx-qLc">
+                        <rect key="frame" x="85" y="40" width="275" height="18"/>
+                        <fontDescription key="fontDescription" name="BentonSansBBVA-Bold" family="Benton Sans BBVA" pointSize="15"/>
+                        <color key="textColor" name="1_BBVANAVY"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hi5-Im-Kib">
+                        <rect key="frame" x="20" y="24" width="50" height="50"/>
+                        <color key="backgroundColor" name="1_BBVANAVY"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="hi5-Im-Kib" secondAttribute="height" multiplier="1:1" id="AwP-Um-ErM"/>
+                            <constraint firstAttribute="width" constant="50" id="cTM-h2-xAv"/>
+                            <constraint firstAttribute="height" constant="50" id="miB-fH-tkW"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mFx-LL-sEc">
+                        <rect key="frame" x="0.0" y="0.0" width="20" height="99"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="b2y-mh-7Pk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBR-jm-djn">
+                        <rect key="frame" x="20" y="24" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="VBR-jm-djn" secondAttribute="height" multiplier="1:1" id="deo-Qk-8Z9"/>
+                            <constraint firstAttribute="height" constant="50" id="l7z-Yj-PqA"/>
+                            <constraint firstAttribute="width" constant="50" id="rbK-fl-J2w"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="BentonSansBBVA-Bold" family="Benton Sans BBVA" pointSize="50"/>
+                        <color key="textColor" name="5_BBVALIGHTAQUA"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="GTC-Tx-qLc" secondAttribute="trailing" constant="15" id="BCd-Pb-fGb"/>
+                    <constraint firstItem="GTC-Tx-qLc" firstAttribute="centerY" secondItem="o94-lh-1ia" secondAttribute="centerY" id="KTf-40-aRg"/>
+                    <constraint firstItem="mFx-LL-sEc" firstAttribute="top" secondItem="o94-lh-1ia" secondAttribute="top" id="Pz4-qe-BHd"/>
+                    <constraint firstItem="hi5-Im-Kib" firstAttribute="leading" secondItem="mFx-LL-sEc" secondAttribute="trailing" id="TTL-Ac-gFp"/>
+                    <constraint firstItem="GTC-Tx-qLc" firstAttribute="leading" secondItem="hi5-Im-Kib" secondAttribute="trailing" constant="15" id="W0H-4a-Kok"/>
+                    <constraint firstItem="VBR-jm-djn" firstAttribute="leading" secondItem="mFx-LL-sEc" secondAttribute="trailing" id="awa-Ab-Ljd"/>
+                    <constraint firstItem="VBR-jm-djn" firstAttribute="centerY" secondItem="o94-lh-1ia" secondAttribute="centerY" id="g80-87-OOk"/>
+                    <constraint firstItem="mFx-LL-sEc" firstAttribute="leading" secondItem="o94-lh-1ia" secondAttribute="leading" id="hX0-FB-b6i"/>
+                    <constraint firstItem="hi5-Im-Kib" firstAttribute="centerY" secondItem="o94-lh-1ia" secondAttribute="centerY" id="iiJ-Fj-LI8"/>
+                    <constraint firstAttribute="bottom" secondItem="mFx-LL-sEc" secondAttribute="bottom" id="tfb-4u-aQm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgCircle" destination="hi5-Im-Kib" id="K0V-7P-grU"/>
+                <outlet property="lblAnswer" destination="GTC-Tx-qLc" id="sud-kn-loi"/>
+                <outlet property="lblLetter" destination="VBR-jm-djn" id="hKG-Vu-cgu"/>
+            </connections>
+            <point key="canvasLocation" x="27.5" y="87"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="1_BBVANAVY">
+            <color red="0.090999998149999997" green="0.14800000190000001" blue="0.2590000033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="5_BBVALIGHTAQUA">
+            <color red="0.35299998519999998" green="0.76899999379999995" blue="0.76899999379999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

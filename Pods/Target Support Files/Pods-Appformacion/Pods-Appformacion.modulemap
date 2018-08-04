@@ -1,0 +1,6 @@
+framework module Pods_Appformacion {
+  umbrella header "Pods-Appformacion-umbrella.h"
+
+  export *
+  module * { export * }
+}

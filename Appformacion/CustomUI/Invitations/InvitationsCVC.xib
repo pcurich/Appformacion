@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BentonSansBBVA-Bold.otf">
+            <string>BentonSansBBVA-Bold</string>
+        </array>
+        <array key="BentonSansBBVA-Book.otf">
+            <string>BentonSansBBVA-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="InvitationsCVC" id="gTV-IL-0wX" customClass="InvitationsCVC" customModule="Appformacion" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="305" height="122"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="305" height="122"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktO-Ga-Xhc">
+                        <rect key="frame" x="0.0" y="0.0" width="305" height="122"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ru-Gz-hC3" userLabel="Img Square">
+                                <rect key="frame" x="20" y="20" width="80" height="80"/>
+                                <color key="backgroundColor" name="5_BBVAMEDAQUA"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Ru-Gz-hC3" secondAttribute="height" multiplier="1:1" id="Opt-h3-RGi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2l-Lx-o8n">
+                                <rect key="frame" x="20" y="20" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="w2l-Lx-o8n" secondAttribute="height" multiplier="1:1" id="Xnh-M8-pj9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BentonSansBBVA-Bold" family="Benton Sans BBVA" pointSize="50"/>
+                                <color key="textColor" name="1_BBVANAVY"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formacion de Asesores con per" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UlS-Ez-br7">
+                                <rect key="frame" x="120" y="20" width="145" height="36"/>
+                                <fontDescription key="fontDescription" name="BentonSansBBVA-Bold" family="Benton Sans BBVA" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7O1-xv-hmZ">
+                                <rect key="frame" x="285" y="0.0" width="20" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="2Ev-as-rSY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQc-VS-h2a" userLabel="line">
+                                <rect key="frame" x="20" y="120" width="265" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="fAM-ja-gUe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formacion de Asesores con " lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zBL-aE-HtS">
+                                <rect key="frame" x="120" y="71" width="145" height="29"/>
+                                <fontDescription key="fontDescription" name="BentonSansBBVA-Book" family="Benton Sans BBVA" pointSize="12"/>
+                                <color key="textColor" name="6_BBVA100"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7O1-xv-hmZ" firstAttribute="top" secondItem="ktO-Ga-Xhc" secondAttribute="top" id="0b0-9J-uVX"/>
+                            <constraint firstItem="1Ru-Gz-hC3" firstAttribute="leading" secondItem="ktO-Ga-Xhc" secondAttribute="leading" constant="20" id="6sR-bm-6Q7"/>
+                            <constraint firstItem="EQc-VS-h2a" firstAttribute="leading" secondItem="ktO-Ga-Xhc" secondAttribute="leading" constant="20" id="Lh9-Rq-O6i"/>
+                            <constraint firstItem="UlS-Ez-br7" firstAttribute="top" secondItem="ktO-Ga-Xhc" secondAttribute="top" constant="20" id="LqQ-V7-AIg"/>
+                            <constraint firstItem="w2l-Lx-o8n" firstAttribute="leading" secondItem="ktO-Ga-Xhc" secondAttribute="leading" constant="20" id="ONJ-cg-oEO"/>
+                            <constraint firstItem="EQc-VS-h2a" firstAttribute="top" secondItem="zBL-aE-HtS" secondAttribute="bottom" constant="20" id="RDc-dq-r91"/>
+                            <constraint firstItem="1Ru-Gz-hC3" firstAttribute="top" secondItem="ktO-Ga-Xhc" secondAttribute="top" constant="20" id="SAI-2d-bGU"/>
+                            <constraint firstItem="7O1-xv-hmZ" firstAttribute="leading" secondItem="UlS-Ez-br7" secondAttribute="trailing" constant="20" id="Ubg-wb-Qyy"/>
+                            <constraint firstItem="EQc-VS-h2a" firstAttribute="top" secondItem="1Ru-Gz-hC3" secondAttribute="bottom" constant="20" id="VAO-hW-qpS"/>
+                            <constraint firstAttribute="bottom" secondItem="7O1-xv-hmZ" secondAttribute="bottom" id="bwv-gx-T77"/>
+                            <constraint firstItem="UlS-Ez-br7" firstAttribute="leading" secondItem="1Ru-Gz-hC3" secondAttribute="trailing" constant="20" id="dlW-4s-SYr"/>
+                            <constraint firstAttribute="bottom" secondItem="EQc-VS-h2a" secondAttribute="bottom" id="f3r-rf-y7s"/>
+                            <constraint firstAttribute="trailing" secondItem="EQc-VS-h2a" secondAttribute="trailing" constant="20" id="f68-JW-A53"/>
+                            <constraint firstItem="7O1-xv-hmZ" firstAttribute="leading" secondItem="zBL-aE-HtS" secondAttribute="trailing" constant="20" id="jsG-Ef-wkS"/>
+                            <constraint firstItem="w2l-Lx-o8n" firstAttribute="top" secondItem="ktO-Ga-Xhc" secondAttribute="top" constant="20" id="k2l-0Z-Vdp"/>
+                            <constraint firstAttribute="trailing" secondItem="7O1-xv-hmZ" secondAttribute="trailing" id="oTI-24-1oj"/>
+                            <constraint firstItem="EQc-VS-h2a" firstAttribute="top" secondItem="w2l-Lx-o8n" secondAttribute="bottom" constant="20" id="rVH-dG-wyQ"/>
+                            <constraint firstItem="zBL-aE-HtS" firstAttribute="leading" secondItem="1Ru-Gz-hC3" secondAttribute="trailing" constant="20" id="uNN-AM-jNX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ktO-Ga-Xhc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9dY-me-Nxp"/>
+                <constraint firstAttribute="bottom" secondItem="ktO-Ga-Xhc" secondAttribute="bottom" id="9mk-pM-AGI"/>
+                <constraint firstAttribute="trailing" secondItem="ktO-Ga-Xhc" secondAttribute="trailing" id="EVh-XR-3mY"/>
+                <constraint firstItem="ktO-Ga-Xhc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Heu-bj-n0C"/>
+            </constraints>
+            <size key="customSize" width="504" height="100"/>
+            <connections>
+                <outlet property="comment" destination="zBL-aE-HtS" id="2uB-y6-iao"/>
+                <outlet property="imgType" destination="1Ru-Gz-hC3" id="rzp-jx-oTr"/>
+                <outlet property="title" destination="UlS-Ez-br7" id="th6-Ys-3Xr"/>
+                <outlet property="typeOfInvitation" destination="w2l-Lx-o8n" id="XVh-VX-RAY"/>
+            </connections>
+            <point key="canvasLocation" x="152.5" y="181"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="1_BBVANAVY">
+            <color red="0.090999998152256012" green="0.14800000190734863" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="5_BBVAMEDAQUA">
+            <color red="0.0080000003799796104" green="0.6470000147819519" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="6_BBVA100">
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

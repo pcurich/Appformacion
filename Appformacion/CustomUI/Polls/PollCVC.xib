@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BentonSansBBVA-Book.otf">
+            <string>BentonSansBBVA-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="PollCVC" id="0js-6X-M2a" customClass="PollCVC" customModule="Appformacion" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3g-vE-ZUV">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qAS-pe-mft">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oXp-ad-Cpo"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="linea" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E9Q-Ya-HAu">
+                                <rect key="frame" x="0.0" y="50" width="50" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="uP5-bL-3Di"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dco-et-vAI">
+                                <rect key="frame" x="10" y="20.5" width="30" height="14.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="BentonSansBBVA-Book" family="Benton Sans BBVA" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qAS-pe-mft" firstAttribute="top" secondItem="d3g-vE-ZUV" secondAttribute="top" id="GZC-5U-G0Z"/>
+                            <constraint firstItem="E9Q-Ya-HAu" firstAttribute="leading" secondItem="d3g-vE-ZUV" secondAttribute="leading" id="I3h-h5-54j"/>
+                            <constraint firstAttribute="bottom" secondItem="E9Q-Ya-HAu" secondAttribute="bottom" id="Ice-EG-j4x"/>
+                            <constraint firstItem="Dco-et-vAI" firstAttribute="centerX" secondItem="d3g-vE-ZUV" secondAttribute="centerX" id="OlF-dG-pli"/>
+                            <constraint firstItem="Dco-et-vAI" firstAttribute="centerY" secondItem="d3g-vE-ZUV" secondAttribute="centerY" id="aDx-Yk-Ogd"/>
+                            <constraint firstAttribute="trailing" secondItem="E9Q-Ya-HAu" secondAttribute="trailing" id="b44-PX-M8g"/>
+                            <constraint firstItem="E9Q-Ya-HAu" firstAttribute="top" secondItem="qAS-pe-mft" secondAttribute="bottom" id="bpo-ud-Ulb"/>
+                            <constraint firstAttribute="trailing" secondItem="qAS-pe-mft" secondAttribute="trailing" id="hTf-af-LnP"/>
+                            <constraint firstItem="E9Q-Ya-HAu" firstAttribute="top" secondItem="qAS-pe-mft" secondAttribute="bottom" id="jZJ-0y-GUc"/>
+                            <constraint firstItem="qAS-pe-mft" firstAttribute="leading" secondItem="d3g-vE-ZUV" secondAttribute="leading" id="ysD-EF-dtT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="d3g-vE-ZUV" firstAttribute="leading" secondItem="0js-6X-M2a" secondAttribute="leading" id="8tb-Sh-jUl"/>
+                <constraint firstAttribute="trailing" secondItem="d3g-vE-ZUV" secondAttribute="trailing" id="9cZ-Zg-4gH"/>
+                <constraint firstItem="d3g-vE-ZUV" firstAttribute="top" secondItem="0js-6X-M2a" secondAttribute="top" id="bx6-S7-37k"/>
+                <constraint firstAttribute="bottom" secondItem="d3g-vE-ZUV" secondAttribute="bottom" id="cCi-4e-ZX2"/>
+            </constraints>
+            <size key="customSize" width="304" height="210"/>
+            <connections>
+                <outlet property="imgFondo" destination="qAS-pe-mft" id="0tJ-oe-ai6"/>
+                <outlet property="lblAlternativa" destination="Dco-et-vAI" id="yb8-1V-d1V"/>
+                <outlet property="view" destination="d3g-vE-ZUV" id="Ttj-QX-acC"/>
+            </connections>
+            <point key="canvasLocation" x="3" y="39.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="linea" width="720" height="12"/>
+    </resources>
+</document>
