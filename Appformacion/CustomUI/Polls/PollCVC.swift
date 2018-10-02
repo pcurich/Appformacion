@@ -13,6 +13,9 @@ class PollCVC : UICollectionViewCell  {
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var imgFondo: UIImageView!
     @IBOutlet weak var lblAlternativa: UILabel!
+    
+    @IBOutlet weak var txtSugerencia: UITextView!
+ 
     var questionId : Int?
     
     var alternative: PollAnswer! {
@@ -25,22 +28,21 @@ class PollCVC : UICollectionViewCell  {
             }
             imgFondo.backgroundColor = UIColor.BBVAAQUA()
             questionId = alternative.questionId
-            
         }
     }
-    
+     
     override var isSelected: Bool {
         didSet{
             if self.isSelected
             {
                 self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-                imgFondo.backgroundColor = UIColor.BBVADARKAQUA() 
+                imgFondo.backgroundColor = UIColor.PoolSelected()
                 //self.tickImageView.isHidden = false
             }
             else
             {
                 self.transform = CGAffineTransform.identity
-                imgFondo.backgroundColor = UIColor.BBVAAQUA()
+                imgFondo.backgroundColor = UIColor.PoolUnSelected()
                 //self.tickImageView.isHidden = true
             }
         }

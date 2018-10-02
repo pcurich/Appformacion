@@ -14,10 +14,7 @@ class CalendarService {
     
     static func getEventCalendarOnBackground(year: String, month : String, register: String, completionHandler: @escaping ([String : [FechaValue]]) -> ()){
         
-        let headers = ["registro":register,
-                       "ano": year,
-                       "mes": month]
-        
+        let headers = ["registro":register,"ano": year,"mes": month]
         
         let url = URL(string: Constants.WEBSERVICE.calendar)
         var urlRequest = URLRequest(url: url!)
@@ -33,14 +30,16 @@ class CalendarService {
                     if response.data != nil {
                         do {
                             let eventCalendar = try JSONDecoder().decode(EventCalendar.self, from: response.data!)
-                            for calendar in eventCalendar.body! {
-                                for date in calendar.value {
-                                    for value in date.fechaValue {
-                                        let fechaKey = String(date.fechaKey)
-                                        if (eventCal[fechaKey] == nil) {
-                                            eventCal[fechaKey]  = [FechaValue]()
+                            if(eventCalendar.body != nil){
+                                for calendar in eventCalendar.body! {
+                                    for date in calendar.value {
+                                        for value in date.fechaValue {
+                                            let fechaKey = String(date.fechaKey)
+                                            if (eventCal[fechaKey] == nil) {
+                                                eventCal[fechaKey]  = [FechaValue]()
+                                            }
+                                            eventCal[fechaKey]?.append(value)
                                         }
-                                        eventCal[fechaKey]?.append(value)
                                     }
                                 }
                             }

@@ -14,21 +14,47 @@ struct Invitation :Codable {
 }
 
 struct CursosPendientesAceptacion : Codable {
-    let tipoEvento : String?
-    let indicador : String?
-    let grupoId : String?
-    let horas : String?
-    let minutos : String?
-    let nombre : String?
-    let objetivo : String?
-    let tema : String?
-    let codigo : String?
-    let contenido : String?
-    let horarioId : String?
+    let type       : String
+    let hours      : String
+    let minutes    : String
+    let name       : String
+    let target     : String
+    let scheduleId : String
+    let groupId    : String
     let urlSilabus : String?
-    let urlDrive : String?
-    let fecha : String?
-    let nroSessiones : String?
+    let urlDrive   : String?
+    let date       : String
+    let nSessions  : String
+    
+    enum CodingKeys: String, CodingKey {
+        case type          = "indicador" // CURS O PROG
+        case hours         = "horas"
+        case minutes       = "minutos"
+        case name          = "nombre"    // Nombre del curso o programa
+        case target        = "objetivo"
+        case groupId       = "grupoId"
+        case scheduleId    = "horarioId"
+        case urlSilabus    = "urlSilabus"
+        case urlDrive      = "urlDrive"
+        case date          = "fecha"
+        case nSessions     = "nroSessiones"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        type          = try values.decode(String.self, forKey: .type)
+        hours         = try values.decode(String.self, forKey: .hours)
+        minutes       = try values.decode(String.self, forKey: .minutes)
+        name          = try values.decode(String.self, forKey: .name)
+        target        = try values.decode(String.self, forKey: .target)
+        scheduleId    = try values.decode(String.self, forKey: .scheduleId)
+        groupId       = try values.decode(String.self, forKey: .groupId)
+        urlSilabus    = try values.decodeIfPresent(String.self, forKey: .urlSilabus)
+        urlDrive      = try values.decodeIfPresent(String.self, forKey: .urlDrive)
+        date          = try values.decode(String.self, forKey: .date)
+        nSessions     = try values.decode(String.self, forKey: .nSessions)
+    }
+    
 }
 
 struct InvitationDetails :Codable {
@@ -38,15 +64,40 @@ struct InvitationDetails :Codable {
 }
 
 struct CursoDetalle : Codable {
-    let fecha  : String?
-    let horaInicio  : String?
-    let horaFinal  : String?
-    let sala  : String?
-    let direccion  : String?
-    let latitud  : String?
-    let longitud  : String?
-    let urlUbicacion  : String?
-    let fechaInicioFormato  : String?
+    let date       : String
+    let startTime  : String
+    let endTime    : String  
+    let room       : String
+    let address    : String
+    let latitude   : String
+    let longitude  : String
+    let dateFormat : String
+    let url        : String
+    
+    enum CodingKeys: String, CodingKey {
+        case date       = "fecha"
+        case startTime  = "horaInicio"
+        case endTime    = "horaFinal"
+        case room       = "sala"
+        case address    = "direccion"
+        case latitude   = "latitud"
+        case longitude  = "longitud"
+        case dateFormat = "fechaInicioFormato"
+        case url        = "urlUbicacion"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        date       = try values.decode(String.self, forKey: .date)
+        startTime  = try values.decode(String.self, forKey: .startTime)
+        endTime    = try values.decode(String.self, forKey: .endTime)
+        room       = try values.decode(String.self, forKey: .room)
+        address    = try values.decode(String.self, forKey: .address)
+        latitude   = try values.decode(String.self, forKey: .latitude)
+        longitude  = try values.decode(String.self, forKey: .longitude)
+        dateFormat = try values.decode(String.self, forKey: .dateFormat)
+        url        = try values.decode(String.self, forKey: .url)
+    }
 }
 
 struct RespuestaTipo :Codable {
@@ -56,9 +107,28 @@ struct RespuestaTipo :Codable {
 }
 
 struct InvitacionTipo : Codable {
-    let flag : Int?
-    let label : String?
-    let tipoRespuesta : String?
+    let flag : Int
+    let label : String
+    let code : String
+    
+    enum CodingKeys: String, CodingKey {
+        case flag  = "flag"
+        case label = "label"
+        case code  = "tipoRespuesta"
+    }
+    
+    init(flag: Int, label:String, code: String) {
+        self.flag = flag
+        self.code = code
+        self.label = label
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        flag  = try values.decode(Int.self, forKey: .flag)
+        label = try values.decode(String.self, forKey: .label)
+        code  = try values.decode(String.self, forKey: .code)
+    }
 }
 
 struct Respuesta : Codable {

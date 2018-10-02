@@ -89,7 +89,7 @@ extension MaterialVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if (materials[(indexPath.row)].urlDrive!.count <= 10)   {
-            let tipo = materials[(indexPath.row)].indicador == "CURS" ? "curso" : "programa"
+            let tipo = materials[(indexPath.row)].type == "CURS" ? "curso" : "programa"
             let str = String.init(format: "El presente %@ no tiene materiales disponibles", tipo)
             AlertHelper.notificationAlert(title: "Materiales no disponible", message: str , viewController: self)
         } else {

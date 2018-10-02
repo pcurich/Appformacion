@@ -94,15 +94,13 @@ struct EvaluationQuestion : Codable {
 }
 
 struct EvaluationAnswer  : Codable {
-    var responseId   : Int = 0
-    var order        : String = ""
+    var responseId   : Int = 0 
     var description  : String = ""
     var responseType : String = "" //RPTA_COR - RPTA_INC
     var isSelected   : Bool = false
     
     enum CodingKeys: String, CodingKey {
         case responseId    = "alternativaId"
-        case order         = "letra"
         case description   = "descripcion"
         case responseType  = "codRespuesta"
     }
@@ -110,7 +108,7 @@ struct EvaluationAnswer  : Codable {
     init(from decoder: Decoder) throws {
         let values   = try decoder.container(keyedBy: CodingKeys.self)
         responseId   = try values.decode(Int.self, forKey: .responseId)
-        order        = try values.decode(String.self, forKey: .order)
+        
         description  = try values.decode(String.self, forKey: .description)
         responseType = try values.decode(String.self, forKey: .responseType)
     }

@@ -24,20 +24,20 @@ class ActivitiesCVC: UICollectionViewCell {
     var actividad: ActividadesProgramadas! {
         didSet {
             
-            let num = actividad.sesiones?.split(separator: "/")[0]
-            let den = actividad.sesiones?.split(separator: "/")[1]
+            let num = actividad.sessions.split(separator: "/")[0]
+            let den = actividad.sessions.split(separator: "/")[1]
             
-            let result = ((num! as NSString).doubleValue * 100 / (den! as NSString).doubleValue)
+            let result = ((num as NSString).doubleValue * 100 / (den as NSString).doubleValue)
             
             lblProgress.text =  "\(result.truncate(places: 2))" + " %"
-            lblTitle.text = actividad.nombre!
+            lblTitle.text = actividad.name
             
             lblTitle.font = lblTitle.font.withSize(12)
             lblProgress.font = lblProgress.font.withSize(10)
             
             
-            typeOfInvitation.text = actividad.indicador == "CURS" ? "C" : "P"
-            progressBar.progress = ((num! as NSString).floatValue / (den! as NSString).floatValue)
+            typeOfInvitation.text = actividad.type == "CURS" ? "C" : "P"
+            progressBar.progress = ((num as NSString).floatValue / (den as NSString).floatValue)
             
             if progressBar.transform.d<2 {
                 progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 2)

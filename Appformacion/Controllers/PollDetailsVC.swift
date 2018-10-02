@@ -19,7 +19,7 @@ class PollDetailsVC: BaseVC {
     
     var currentQuestion : PollQuestion! {
         didSet{
-            self.lblAspect.text = pollAspect?.description?.uppercased()
+            self.lblAspect.text = pollAspect?.description.uppercased()
             self.lblTeacher.text = pollAspect?.teacherName
             
             if (pollAspect?.teacherName == nil){
@@ -47,8 +47,14 @@ class PollDetailsVC: BaseVC {
     
     @IBOutlet weak var nextBarButton: UIBarButtonItem!
     @IBOutlet weak var previousBarButton: UIBarButtonItem!
+    @IBOutlet weak var txtSuggestion: UITextView!
+    
+    @IBOutlet weak var stack: UIStackView!
+    @IBOutlet weak var suggestionHeight: NSLayoutConstraint!
+    @IBOutlet weak var alternativeHeight: NSLayoutConstraint!
     
     var cellCollectionsIdentifier    = "PollCVC"
+    var cellCollectionsIdentifier2   = "PollCVC2"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +67,7 @@ class PollDetailsVC: BaseVC {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         startView()
+        
     }
     
     func startView(){
@@ -69,11 +76,25 @@ class PollDetailsVC: BaseVC {
         setupNib()
         cleanTitle()
         stopIndicator()
+        
+        if(currentQuestion.responseList.count == 1){
+            alternativeHeight.constant = 0
+            suggestionHeight.constant = stack.frame.height
+        }else{
+            suggestionHeight.constant = 0
+            alternativeHeight.constant = stack.frame.height
+        }
+        
     }
     
     func setupNib(){
-        let nibCell = UINib(nibName: cellCollectionsIdentifier, bundle: Bundle.main)
-        collectionView.register(nibCell, forCellWithReuseIdentifier: cellCollectionsIdentifier)
+        if(currentQuestion.responseList.count == 1){
+            let nibCell = UINib(nibName: cellCollectionsIdentifier2, bundle: Bundle.main)
+            collectionView.register(nibCell, forCellWithReuseIdentifier: cellCollectionsIdentifier2)
+        }else{
+            let nibCell = UINib(nibName: cellCollectionsIdentifier, bundle: Bundle.main)
+            collectionView.register(nibCell, forCellWithReuseIdentifier: cellCollectionsIdentifier)
+        }
     }
     
     @IBAction func previousQuestion(_ sender: UIBarButtonItem) {
@@ -88,11 +109,17 @@ class PollDetailsVC: BaseVC {
     @IBAction func nextQuestion(_ sender: Any) {
         var isSelected = false
         
-        for index in 0..<(self.pollAspect?.questions[indexQuestion].responseList.count)!{
-            if(self.pollAspect?.questions[indexQuestion].responseList[index].isSelected)!{
-                isSelected = isSelected || (self.pollAspect?.questions[indexQuestion].responseList[index].isSelected)!
+        if(currentQuestion.responseList.count == 1){
+            isSelected = true
+            pollResponse.append(PollResponse(preguntaId: currentQuestion.questionId, rtaId: currentQuestion.responseList[0].responseId, rtadDescription: txtSuggestion.text)) 
+        }else{
+            for index in 0..<(self.pollAspect?.questions[indexQuestion].responseList.count)!{
+                if(self.pollAspect?.questions[indexQuestion].responseList[index].isSelected)!{
+                    isSelected = isSelected || (self.pollAspect?.questions[indexQuestion].responseList[index].isSelected)!
+                }
             }
         }
+        
         
         if(isSelected){
             if(indexQuestion==(pollAspect?.questions.count)!-1){
@@ -142,11 +169,11 @@ class PollDetailsVC: BaseVC {
             //el ultimo
             nextBarButton.title = "Finalizar"
             
-        }else{
-            if (indexQuestion==0){
-                previousBarButton.title = ""
-            }
         }
+        if (indexQuestion==0){
+            previousBarButton.title = ""
+        }
+        
     }
     
     func updateAnswer(){
@@ -154,7 +181,7 @@ class PollDetailsVC: BaseVC {
             for response in question.responseList{
                 if (response.isSelected){
                     pollResponse.append(
-                        PollResponse(preguntaId: question.questionId!, rtaId: response.responseId)
+                        PollResponse(preguntaId: question.questionId, rtaId: response.responseId,rtadDescription: response.name!)
                     )
                     break
                 }
@@ -171,11 +198,18 @@ extension PollDetailsVC : UICollectionViewDataSource , UICollectionViewDelegate 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellCollectionsIdentifier, for: indexPath) as! PollCVC
-        let answer = self.pollAspect?.questions[indexQuestion].responseList[indexPath.row]
-        cell.alternative = answer
-        cell.isSelected = (answer!.isSelected)
-        return cell
+        
+        if(currentQuestion.responseList.count == 1){
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellCollectionsIdentifier2, for: indexPath) as! PollCVC2
+            return cell
+        }else{
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: cellCollectionsIdentifier, for: indexPath) as! PollCVC
+            let answer = self.pollAspect?.questions[indexQuestion].responseList[indexPath.row]
+            cell.alternative = answer
+            cell.isSelected = (answer!.isSelected)
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -188,22 +222,28 @@ extension PollDetailsVC : UICollectionViewDataSource , UICollectionViewDelegate 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        var max = 0
-        for size in (self.pollAspect?.questions[indexQuestion].responseList)!{
-            if (max < (size.value?.count)!){
-                max = (size.value?.count)!
+        if(self.pollAspect?.questions[indexQuestion].responseList.count == 1){
+            return CGSize(width: collectionView.bounds.width, height: 120)
+        }else{
+            var max = 0
+            for size in (self.pollAspect?.questions[indexQuestion].responseList)!{
+                if (max < (size.value?.count)!){
+                    max = (size.value?.count)!
+                }
             }
+            if (max<3){
+                return CGSize(width: collectionView.bounds.width/5 - 20, height: collectionView.bounds.width/5 - 20)
+            }
+            return CGSize(width: collectionView.bounds.width/2 - 20, height: 40)
         }
-        if (max<3){
-            return CGSize(width: collectionView.bounds.width/5 - 20, height: collectionView.bounds.width/5 - 20)
-        }
-        
-        return CGSize(width: collectionView.bounds.width/2 - 20, height: 40)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
         return UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
     }
+    
+    //para el teclado se puede utilizar esto
+    //https://stackoverflow.com/questions/26070242/move-view-with-keyboard-using-swift
     
 }
 

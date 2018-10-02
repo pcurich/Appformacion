@@ -19,7 +19,6 @@ class InvitationService {
         urlRequest.allHTTPHeaderFields = headers
         
         DispatchQueue.main.async {
-            
             DefaultAlamofireManager.sharedInstance.request(urlRequest).responseJSON { (response) in
                 if((UIApplication.shared.delegate as! AppDelegate).sessionValid(response: response)){
                     if response.data != nil {
@@ -38,7 +37,7 @@ class InvitationService {
     static func getDetails(horarioId: String, completionHandler: @escaping ([CursoDetalle]) -> ()) {
         let headers = ["horarioId":"\(horarioId)"]
         
-        let url = URL(string: Constants.WEBSERVICE.salaDisponibilidad)
+        let url = URL(string: Constants.WEBSERVICE.invitationDetails)
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = "POST"
         urlRequest.allHTTPHeaderFields = headers
@@ -62,7 +61,7 @@ class InvitationService {
     
     static func getResponseList(completionHandler: @escaping ([InvitacionTipo]) -> ()) {
         
-        let url = URL(string: Constants.WEBSERVICE.respuestas)
+        let url = URL(string: Constants.WEBSERVICE.invitationsResponseList)
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = "POST"
         

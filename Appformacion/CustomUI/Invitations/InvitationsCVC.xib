@@ -48,8 +48,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formacion de Asesores con per" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UlS-Ez-br7">
-                                <rect key="frame" x="120" y="20" width="145" height="36"/>
-                                <fontDescription key="fontDescription" name="BentonSansBBVA-Bold" family="Benton Sans BBVA" pointSize="15"/>
+                                <rect key="frame" x="120" y="30" width="145" height="29"/>
+                                <fontDescription key="fontDescription" name="BentonSansBBVA-Bold" family="Benton Sans BBVA" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -81,7 +81,7 @@
                             <constraint firstItem="7O1-xv-hmZ" firstAttribute="top" secondItem="ktO-Ga-Xhc" secondAttribute="top" id="0b0-9J-uVX"/>
                             <constraint firstItem="1Ru-Gz-hC3" firstAttribute="leading" secondItem="ktO-Ga-Xhc" secondAttribute="leading" constant="20" id="6sR-bm-6Q7"/>
                             <constraint firstItem="EQc-VS-h2a" firstAttribute="leading" secondItem="ktO-Ga-Xhc" secondAttribute="leading" constant="20" id="Lh9-Rq-O6i"/>
-                            <constraint firstItem="UlS-Ez-br7" firstAttribute="top" secondItem="ktO-Ga-Xhc" secondAttribute="top" constant="20" id="LqQ-V7-AIg"/>
+                            <constraint firstItem="UlS-Ez-br7" firstAttribute="top" secondItem="ktO-Ga-Xhc" secondAttribute="top" constant="30" id="LqQ-V7-AIg"/>
                             <constraint firstItem="w2l-Lx-o8n" firstAttribute="leading" secondItem="ktO-Ga-Xhc" secondAttribute="leading" constant="20" id="ONJ-cg-oEO"/>
                             <constraint firstItem="EQc-VS-h2a" firstAttribute="top" secondItem="zBL-aE-HtS" secondAttribute="bottom" constant="20" id="RDc-dq-r91"/>
                             <constraint firstItem="1Ru-Gz-hC3" firstAttribute="top" secondItem="ktO-Ga-Xhc" secondAttribute="top" constant="20" id="SAI-2d-bGU"/>

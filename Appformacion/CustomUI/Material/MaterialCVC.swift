@@ -22,9 +22,9 @@ class MaterialCVC: UICollectionViewCell {
     
     var material: MaterialDetail! {
         didSet {
-            lblTitle.text = material.nombre!
+            lblTitle.text = material.name
             lblTitle.font = lblTitle.font.withSize(12)
-            typeOfInvitation.text = material.indicador == "CURS" ? "C" : "P"
+            typeOfInvitation.text = material.type == "CURS" ? "C" : "P"
         }
     }
   

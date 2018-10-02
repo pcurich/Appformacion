@@ -68,9 +68,7 @@ extension PollService {
     static func getAnswer(questionType : String,questionId: Int) -> [PollAnswer] {
         var bbvaList = getAnswerBBVA(name: questionType)
         var answer : [PollAnswer] = []
-        if (questionType == "RP_T1"){
-            bbvaList = getAnswerBBVA(name: "RP_T4")
-        }
+    
         for db in bbvaList{
             answer.append(PollAnswer(questionId: questionId , responseId: db.EntityId, name: db.Name, code: db.Code, value: db.Value))
         }

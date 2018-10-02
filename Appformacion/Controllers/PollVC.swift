@@ -104,7 +104,7 @@ extension PollVC: UITableViewDelegate, UITableViewDataSource {
         let cell = segue.destination as! PollDetailsVC
         cell.detailTitle = pollList[index.section].name
         cell.pollAspect =  pollList[index.section].aspects[index.row]
-        cell.groupPersonId = pollList[index.section].groupPersonId!
+        cell.groupPersonId = pollList[index.section].groupPersonId
     }
 }
 

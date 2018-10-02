@@ -39,8 +39,8 @@ class ActivityDetailVC: UIViewController {
     
     func setupDesing(){
         
-        self.lblTitle.text = actividad?.nombre
-        self.lblTarget.text = actividad?.objetivo
+        self.lblTitle.text = actividad?.name
+        self.lblTarget.text = actividad?.target
         self.lblTitleEvens.layer.addBorder(edge: UIRectEdge.bottom, color: UIColor.black, thickness: 1)
         self.lblTitleTarget.layer.addBorder(edge: UIRectEdge.bottom, color: UIColor.black, thickness: 1)
     }
@@ -52,7 +52,7 @@ class ActivityDetailVC: UIViewController {
     
     @objc func shareSocialMedia() {
 
-        let shared = UIActivityViewController(activityItems: [actividad?.hashTag!,#imageLiteral(resourceName: "fondo")], applicationActivities: nil)
+        let shared = UIActivityViewController(activityItems: [actividad?.hashTag ?? "",#imageLiteral(resourceName: "fondo")], applicationActivities: nil)
          present(shared, animated: true, completion: nil)
  
     }
@@ -86,7 +86,7 @@ extension ActivityDetailVC : UITableViewDataSource, UITableViewDelegate    {
 // MARK: Prepere dataSource
 extension ActivityDetailVC {
     func getDetails() {
-        ActivityService.getDetails(grupoPersonaId: (actividad?.grupoPersonaId)!) { (response) in
+        ActivityService.getDetails(grupoPersonaId: (actividad?.groupPersonId)!) { (response) in
             self.details = response
         }
     }

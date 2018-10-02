@@ -17,12 +17,13 @@ class InvitationsCVC: UICollectionViewCell {
     
     var invitation: CursosPendientesAceptacion! {
         didSet {
-            let duracion : String = "Duracion: " + invitation.horas! + ":" + invitation.minutos!
+            let duracion : String = "Duracion: " + invitation.hours + ":" + invitation.minutes
             
-            title.text = invitation.nombre!
+            title.text = invitation.name
             title.font = title.font.withSize(12)
-            comment.text = duracion + " - Sesiones: " + "\(invitation.nroSessiones!)"
-            typeOfInvitation.text = invitation.indicador == "CURS" ? "C" : "P"
+            comment.text = duracion + " - Sesiones: " + "\(invitation.nSessions)"
+            comment.font = comment.font.withSize(12)
+            typeOfInvitation.text = invitation.type == "CURS" ? "C" : "P"
         }
     }
         

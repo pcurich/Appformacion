@@ -37,14 +37,12 @@ class LoginVC: BaseVC {
         UserDefaults.standard.set(user, forKey: "registro")
         
         if Constants.REST.useLogin {
-            
             UserService.processLogin(username: user!, password: password!, completionHandler:  {
                 (response) in
                 
                 if(response == "OK"){
                     UserService.saveUserBBVA(user: user!)
                     self.doLoginSucess(user: user!)
-                    
                 }
                 else{
                     self.doLogout()
@@ -56,8 +54,6 @@ class LoginVC: BaseVC {
             UserService.saveUserBBVA(user: "P014773")
             self.doLoginSucess(user: user!)
         }
-        
-        
     }
     
     func doLoginSucess(user : String ){

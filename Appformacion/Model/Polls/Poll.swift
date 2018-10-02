@@ -10,6 +10,7 @@
 struct PollResponse : Codable {
     var preguntaId : Int
     var rtaId : Int
+    var rtadDescription : String
 }
 
 //ENCUESTAS X ASPECTO
@@ -20,9 +21,9 @@ struct Polls :Codable {
 }
 
 struct PollList : Codable {
-    let name          : String?
-    let type          : String?
-    let groupPersonId : Int?
+    let name          : String
+    let type          : String
+    let groupPersonId : Int
     var aspects       : [PollAspect] = []
     
     enum CodingKeys: String, CodingKey {
@@ -33,22 +34,21 @@ struct PollList : Codable {
     }
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        name          = try values.decodeIfPresent(String.self, forKey: .name)
-        type          = try values.decodeIfPresent(String.self, forKey: .type)
+        name          = try values.decode(String.self, forKey: .name)
+        type          = try values.decode(String.self, forKey: .type)
         aspects       = try values.decode([PollAspect].self, forKey: .aspects)
-        groupPersonId = try values.decodeIfPresent(Int.self, forKey: .groupPersonId)
+        groupPersonId = try values.decode(Int.self, forKey: .groupPersonId)
     }
- 
 }
 
 struct PollAspect : Codable {
-    var description   : String?
+    var description   : String
     var teacherId     : Int?
-    var aspectId      : Int?
     var teacherName   : String?
-    var resposeType   : String?
-    var resposeTypeId : Int?
-    var scheduleId    : Int?
+    var aspectId      : Int
+    var resposeType   : String
+    var resposeTypeId : Int
+    var scheduleId    : Int
     var questions     : [PollQuestion] = []
     
     enum CodingKeys: String, CodingKey {
@@ -64,29 +64,21 @@ struct PollAspect : Codable {
     
     init(from decoder: Decoder) throws {
         let values    = try decoder.container(keyedBy: CodingKeys.self)
-        description   = try values.decodeIfPresent(String.self, forKey: .description)
+        description   = try values.decode(String.self, forKey: .description)
         teacherId     = try values.decodeIfPresent(Int.self, forKey: .teacherId)
         teacherName   = try values.decodeIfPresent(String.self, forKey: .teacherName)
-        resposeType   = try values.decodeIfPresent(String.self, forKey: .resposeType)
-        questions     = try values.decode([PollQuestion].self,forKey: .questions)
-        aspectId      = try values.decodeIfPresent(Int.self, forKey: .aspectId)
-        resposeTypeId = try values.decodeIfPresent(Int.self, forKey: .resposeTypeId)
-        scheduleId    = try values.decodeIfPresent(Int.self, forKey: .scheduleId)
-    }
-    
-    init(description : String, teacherId : Int, teacherName : String,questions : [PollQuestion]) {
-        self.description = description
-        self.teacherId   = teacherId
-        self.teacherName = teacherName
-        self.questions   = questions
-        self.resposeType = "Tipo_R1"
+        resposeType   = try values.decode (String.self, forKey: .resposeType)
+        questions     = try values.decode ([PollQuestion].self,forKey: .questions)
+        aspectId      = try values.decode (Int.self, forKey: .aspectId)
+        resposeTypeId = try values.decode (Int.self, forKey: .resposeTypeId)
+        scheduleId    = try values.decode (Int.self, forKey: .scheduleId)
     }
 }
 
 struct PollQuestion : Codable {
-    let questionId   : Int?
+    let questionId   : Int
     let note         : String?
-    let question     : String?
+    let question     : String
     
     var number : Int?
     var responseList : [PollAnswer] = []
@@ -99,18 +91,9 @@ struct PollQuestion : Codable {
     
     init(from decoder: Decoder) throws {
         let values   = try decoder.container(keyedBy: CodingKeys.self)
-        questionId   = try values.decodeIfPresent(Int.self, forKey: .questionId)
+        questionId   = try values.decode(Int.self, forKey: .questionId)
         note         = try values.decodeIfPresent(String.self, forKey: .note)
-        question     = try values.decodeIfPresent(String.self, forKey: .question)
-    }
-    init(i : Int){
-        questionId = 1
-        question = "Te gusta el cacash?" + String(format: "%02d", i)
-        note = "Que pasa chibolo pulpin"
-        for i in 1...10{
-            responseList.append(PollAnswer(id: String(format: "%02d", i)))
-        }
-        
+        question     = try values.decode(String.self, forKey: .question)
     }
 }
 
@@ -129,11 +112,5 @@ struct PollAnswer  : Codable {
         self.code = code
         self.value = value
     }
-    init(id: String){
-        questionId = 0
-        responseId = Int(id)!
-        name       = "RPTA_01"
-        code       = id
-        value      = id
-    }
+    
 }

@@ -22,6 +22,7 @@ class AssistanceDetailVC: BaseVC {
         didSet {
             tableView.reloadData()
             stopIndicator()
+            lblTitle.text = details[0].program != nil ?details[0].program:details[0].course
         }
     }
     
@@ -40,15 +41,14 @@ class AssistanceDetailVC: BaseVC {
     }
     
     func setupDesing(){
-        lblTitle.layer.addBorder(edge: UIRectEdge.bottom, color: UIColor.black, thickness: 1)
-        tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+        
+        //tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         
     }
     
     @IBAction func SendResponse(_ sender: UIButton) {
-        txtCode.isUserInteractionEnabled = false
-        setCheckIn()
-        if (assistance?.codigo?.uppercased() == txtCode.text?.uppercased()){
+        txtCode.isUserInteractionEnabled = false 
+        if (assistance?.code?.uppercased() == txtCode.text?.uppercased()){
             setCheckIn()
         }else{
             AlertHelper.notificationAlert(title: "Error", message: "El código no es correcto", viewController: self)
@@ -100,7 +100,7 @@ extension AssistanceDetailVC {
 // MARK: Prepere dataSource
 extension AssistanceDetailVC {
     func getAssistanceDetail() {
-        AssistanceService.getAssistanceDetails(register: UserService.getUserBBVA(), salaId:  (assistance?.salaId)!, completionHandler: { (response) in
+        AssistanceService.getAssistanceDetails(register: UserService.getUserBBVA(), salaId:  (assistance?.roomId)!, completionHandler: { (response) in
             self.details = response
         })
     }

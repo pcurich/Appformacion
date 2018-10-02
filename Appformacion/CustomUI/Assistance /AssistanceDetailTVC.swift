@@ -37,19 +37,19 @@ class AssistanceDetailTVC: UITableViewCell {
     
     var detalle: AssistanceDetailLine! {
         didSet {
-            lblHoraInicio?.text = detalle.inicio
-            lblHoraFin?.text = detalle.final
-            lblDescripcion?.text = detalle.cursoNombre
+            lblHoraInicio?.text = detalle.startTime
+            lblHoraFin?.text = detalle.endTime
+            lblDescripcion?.text = detalle.course
             imgCircle?.setRounded()
             imgCircle?.backgroundColor = UIColor.red
             
             let date = Date()
             let currentTime = date.getTimeInt(date: date)
-            let i_hh = (detalle.inicio!.split(separator: ":")[0] as NSString).integerValue
-            let i_mm = (detalle.inicio!.split(separator: ":")[1] as NSString).integerValue
+            let i_hh = (detalle.startTime.split(separator: ":")[0] as NSString).integerValue
+            let i_mm = (detalle.startTime.split(separator: ":")[1] as NSString).integerValue
             let i_Time = i_hh*10000 + i_mm*100
-            let f_hh = (detalle.final!.split(separator: ":")[0]  as NSString).integerValue
-            let f_mm = (detalle.final!.split(separator: ":")[1]  as NSString).integerValue
+            let f_hh = (detalle.endTime.split(separator: ":")[0]  as NSString).integerValue
+            let f_mm = (detalle.endTime.split(separator: ":")[1]  as NSString).integerValue
             let f_Time = f_hh*10000 + f_mm*100
             
             if (i_Time<=currentTime && currentTime>=f_Time){

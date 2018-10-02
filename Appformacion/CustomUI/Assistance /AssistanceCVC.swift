@@ -23,13 +23,13 @@ class AssistanceCVC: UICollectionViewCell {
     var asistencia: AssistanceLine! {
         didSet {
             
-            lblTitle.text = asistencia.nombre!
+            lblTitle.text = asistencia.name
             lblTitle.font = lblTitle.font.withSize(15)
             
-            lblSubTitle.text = asistencia.direccion
+            lblSubTitle.text = asistencia.address
             lblTitle.font = lblTitle.font.withSize(12)
     
-            typeOfInvitation.text = asistencia.indicador == "CURS" ? "C" : "P"
+            typeOfInvitation.text = asistencia.type == "CURS" ? "C" : "P"
            
         }
         

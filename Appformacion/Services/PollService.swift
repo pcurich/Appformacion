@@ -26,8 +26,7 @@ class PollService {
                         var polls = try JSONDecoder().decode(Polls.self, from: response.data!)
                         DispatchQueue.main.async {
                             if( polls.body == nil || polls.body?.count == 0){
-                                    completionHandler([PollList]())
-                                
+                                completionHandler([PollList]())
                             }else{
                                 for poll in 0...(polls.body?.count)! - 1 {
                                     for aspect in 0...polls.body![poll].aspects.count - 1{
@@ -35,7 +34,7 @@ class PollService {
                                             for question in 0...polls.body![poll].aspects[aspect].questions.count - 1 {
                                                 let t_question = polls.body![poll].aspects[aspect].questions[question]
                                                 let t_aspect = polls.body![poll].aspects[aspect]
-                                                polls.body![poll].aspects[aspect].questions[question].responseList =  PollService.getAnswer(questionType:  t_aspect.resposeType!, questionId: t_question.questionId!)
+                                                polls.body![poll].aspects[aspect].questions[question].responseList =  PollService.getAnswer(questionType:  t_aspect.resposeType, questionId: t_question.questionId)
                                             }
                                         }
                                     }
@@ -58,7 +57,7 @@ class PollService {
     static func save(grupoPersonaId: Int,scheduleId: Int,respuestaEncuesta: String, completionHandler: @escaping (Result) -> ()) {
         let headers = ["grupoPersonaId": "\(grupoPersonaId)",
             "scheduleId": "\(scheduleId)",
-            "respuestaEncuesta" : String(respuestaEncuesta.filter { !" \n\t\r".contains($0) }) ]
+            "respuestaEncuesta" : String(respuestaEncuesta.filter { !"\n\t\r".contains($0) }) ]
         
         let url = URL(string: Constants.WEBSERVICE.pollResponse)
         var urlRequest = URLRequest(url: url!)

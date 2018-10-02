@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,27 +22,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="AssistanceDetailTVC" customModule="Appformacion" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <rect key="frame" x="0.0" y="0.0" width="367" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="367" height="89.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="neZ-MT-PQF">
-                        <rect key="frame" x="300" y="10" width="10" height="10"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="neZ-MT-PQF" secondAttribute="height" multiplier="1:1" id="AT9-ge-oOK"/>
-                            <constraint firstAttribute="height" constant="10" id="VR8-1R-vSm"/>
-                            <constraint firstAttribute="width" constant="10" id="zBO-7L-krm"/>
-                        </constraints>
-                    </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rf2-4K-8dY">
-                        <rect key="frame" x="20" y="27" width="280" height="36.5"/>
+                        <rect key="frame" x="20" y="26.5" width="327" height="36.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6R-MJ-EqZ">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="14.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="327" height="14.5"/>
                                 <fontDescription key="fontDescription" name="BentonSansBBVA-Bold" family="Benton Sans BBVA" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="3uM-MO-2n3">
@@ -52,7 +43,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-jL-8ge">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="12"/>
                                         <fontDescription key="fontDescription" name="BentonSansBBVA-Book" family="Benton Sans BBVA" pointSize="10"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="6_BBVA200"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DV6-Wp-Irc">
@@ -64,7 +55,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3h-hS-27M">
                                         <rect key="frame" x="72" y="0.0" width="25" height="12"/>
                                         <fontDescription key="fontDescription" name="BentonSansBBVA-Book" family="Benton Sans BBVA" pointSize="10"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="6_BBVA200"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -81,17 +72,24 @@
                             <constraint firstAttribute="width" constant="5" id="kPd-RD-aun"/>
                         </constraints>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="neZ-MT-PQF">
+                        <rect key="frame" x="347" y="40" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="7OM-7H-l8a"/>
+                            <constraint firstAttribute="width" constant="10" id="nJo-qA-bqs"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="neZ-MT-PQF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7Eh-3M-AVd"/>
                     <constraint firstItem="Rf2-4K-8dY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8UO-FP-OI4"/>
                     <constraint firstItem="1HP-mS-z21" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8mT-Fi-mXl"/>
                     <constraint firstItem="Rf2-4K-8dY" firstAttribute="leading" secondItem="1HP-mS-z21" secondAttribute="trailing" constant="10" id="8t9-aZ-wa6"/>
+                    <constraint firstAttribute="trailing" secondItem="neZ-MT-PQF" secondAttribute="trailing" constant="10" id="Bye-fz-Du5"/>
                     <constraint firstAttribute="trailing" secondItem="Rf2-4K-8dY" secondAttribute="trailing" constant="20" id="DZG-Hl-Rl8"/>
                     <constraint firstAttribute="bottom" secondItem="1HP-mS-z21" secondAttribute="bottom" id="Dmp-sI-7Mr"/>
+                    <constraint firstItem="neZ-MT-PQF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FE6-h7-2bb"/>
                     <constraint firstItem="1HP-mS-z21" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="wEM-YI-hc3"/>
-                    <constraint firstAttribute="trailing" secondItem="neZ-MT-PQF" secondAttribute="trailing" constant="10" id="wXl-Bm-2d4"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,12 +101,15 @@
                 <outlet property="lblHoraFin" destination="I3h-hS-27M" id="Zec-HP-9Se"/>
                 <outlet property="lblHoraInicio" destination="hpu-jL-8ge" id="6xm-v6-J72"/>
             </connections>
-            <point key="canvasLocation" x="26" y="75"/>
+            <point key="canvasLocation" x="109.5" y="75"/>
         </tableViewCell>
     </objects>
     <resources>
         <namedColor name="5_BBVAAQUA">
             <color red="0.17599999904632568" green="0.80000001192092896" blue="0.80400002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="6_BBVA200">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

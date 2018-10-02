@@ -53,15 +53,20 @@ struct Constants {
         static let enroll = "\(Constants.REST.ip)/enrolarDispositivo"
         static let calendar = "\(Constants.REST.ip)/obtenerCalendario"
         static let dashboard = "\(Constants.REST.ip)/obtenerDashboarInfo"
-        static let respuestas = "\(Constants.REST.ip)/obtenerConfiguracionInvitacionActiva"
+        
+        
         static let invitations = "\(Constants.REST.ip)/obtenerInvitacionesActivas"
-        static let salaDisponibilidad = "\(Constants.REST.ip)/obtenerSalaDisponibilidadInvitaciones"
+        static let invitationDetails = "\(Constants.REST.ip)/obtenerSalaDisponibilidadInvitaciones"
+        static let invitationsResponseList = "\(Constants.REST.ip)/obtenerConfiguracionInvitacionActiva"
         static let responderInvitacion = "\(Constants.REST.ip)/recepcionRespuestInvitacion"
+        
         static let activities = "\(Constants.REST.ip)/obtenerActividadesProgramadas"
         static let activitiesDetails = "\(Constants.REST.ip)/obtenerActividadesProgramadasDetalle"
+        
         static let assistences = "\(Constants.REST.ip)/obtenerAsistenciaXMarcar"
         static let assistenceDetails = "\(Constants.REST.ip)/obtenerAsistenciaXMarcarDetalle"
         static let checkIn =  "\(Constants.REST.ip)/marcarAsistencia"
+        
         static let materials = "\(Constants.REST.ip)/obtenerUrlDrive"
         static let settingPolls = "\(Constants.REST.ip)/buscarConfiguracionEncuestas"
         

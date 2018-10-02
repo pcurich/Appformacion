@@ -27,6 +27,8 @@
 		3D297D6620FDD6B000164E00 /* EvaluationResultTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D297D6420FDD6B000164E00 /* EvaluationResultTVC.xib */; };
 		3D297D6920FDD6E600164E00 /* EvaluationResultHTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D297D6720FDD6E600164E00 /* EvaluationResultHTVC.swift */; };
 		3D297D6A20FDD6E600164E00 /* EvaluationResultHTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D297D6820FDD6E600164E00 /* EvaluationResultHTVC.xib */; };
+		3D312DE52150C47100414ED2 /* PollCVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D312DE32150C47100414ED2 /* PollCVC2.swift */; };
+		3D312DE62150C47100414ED2 /* PollCVC2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D312DE42150C47100414ED2 /* PollCVC2.xib */; };
 		3D37130A20D78CBB00EA5075 /* EvaluationAspectTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D37130820D78CBB00EA5075 /* EvaluationAspectTVC.swift */; };
 		3D37130B20D78CBB00EA5075 /* EvaluationAspectTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D37130920D78CBB00EA5075 /* EvaluationAspectTVC.xib */; };
 		3D40086020818A65003B600F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D40085F20818A65003B600F /* AppDelegate.swift */; };
@@ -79,7 +81,6 @@
 		3DA5B09820C645FF0001295C /* PollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5B09720C645FF0001295C /* PollVC.swift */; };
 		3DA5B09A20C65D2B0001295C /* PollDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5B09920C65D2B0001295C /* PollDetailsVC.swift */; };
 		3DA5B09C20C75A100001295C /* SettingsBBVA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5B09B20C75A100001295C /* SettingsBBVA.swift */; };
-		3DD6391A20C452B3001416AA /* AssistanceDetailLineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD6391920C452B3001416AA /* AssistanceDetailLineVC.swift */; };
 		3DD866CE20B1600C00491B88 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD866CD20B1600C00491B88 /* Dashboard.swift */; };
 		3DDFB64220C4C93B0056F2B9 /* AssistanceDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDFB64020C4C93B0056F2B9 /* AssistanceDetailTVC.swift */; };
 		3DDFB64320C4C93B0056F2B9 /* AssistanceDetailTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DDFB64120C4C93B0056F2B9 /* AssistanceDetailTVC.xib */; };
@@ -152,6 +153,8 @@
 		3D297D6420FDD6B000164E00 /* EvaluationResultTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluationResultTVC.xib; sourceTree = "<group>"; };
 		3D297D6720FDD6E600164E00 /* EvaluationResultHTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationResultHTVC.swift; sourceTree = "<group>"; };
 		3D297D6820FDD6E600164E00 /* EvaluationResultHTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluationResultHTVC.xib; sourceTree = "<group>"; };
+		3D312DE32150C47100414ED2 /* PollCVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollCVC2.swift; sourceTree = "<group>"; };
+		3D312DE42150C47100414ED2 /* PollCVC2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PollCVC2.xib; sourceTree = "<group>"; };
 		3D37130820D78CBB00EA5075 /* EvaluationAspectTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationAspectTVC.swift; sourceTree = "<group>"; };
 		3D37130920D78CBB00EA5075 /* EvaluationAspectTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluationAspectTVC.xib; sourceTree = "<group>"; };
 		3D40085C20818A65003B600F /* Appformacion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appformacion.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,7 +210,6 @@
 		3DA5B09720C645FF0001295C /* PollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollVC.swift; sourceTree = "<group>"; };
 		3DA5B09920C65D2B0001295C /* PollDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollDetailsVC.swift; sourceTree = "<group>"; };
 		3DA5B09B20C75A100001295C /* SettingsBBVA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBBVA.swift; sourceTree = "<group>"; };
-		3DD6391920C452B3001416AA /* AssistanceDetailLineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceDetailLineVC.swift; sourceTree = "<group>"; };
 		3DD866CD20B1600C00491B88 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		3DDFB64020C4C93B0056F2B9 /* AssistanceDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceDetailTVC.swift; sourceTree = "<group>"; };
 		3DDFB64120C4C93B0056F2B9 /* AssistanceDetailTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssistanceDetailTVC.xib; sourceTree = "<group>"; };
@@ -391,7 +393,6 @@
 				3D06DE7920BA9DE400241882 /* ActivityDetailVC.swift */,
 				3DE1DFD120BD149C00CA0AC1 /* AssistanceVC.swift */,
 				3DE1DFD320BD14E900CA0AC1 /* AssistanceDetailVC.swift */,
-				3DD6391920C452B3001416AA /* AssistanceDetailLineVC.swift */,
 				3DE1DFE420BE88FB00CA0AC1 /* MaterialVC.swift */,
 				3DE1DFE620BEECD600CA0AC1 /* MaterialDetailVC.swift */,
 				3DA5B09720C645FF0001295C /* PollVC.swift */,
@@ -520,6 +521,8 @@
 				3D47C0AE20E9997A00060A93 /* PollAspectHTVC.xib */,
 				3D24E9AF20DEB75100D79F1D /* PollCVC.xib */,
 				3DF255B120CC37EA0093D2E1 /* PollCVC.swift */,
+				3D312DE42150C47100414ED2 /* PollCVC2.xib */,
+				3D312DE32150C47100414ED2 /* PollCVC2.swift */,
 			);
 			path = Polls;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				3D24E9B020DEB75100D79F1D /* PollCVC.xib in Resources */,
 				3D4008822081AEBB003B600F /* BentonSansBBVA-Light.otf in Resources */,
 				3D20363220AA097F007F0CE7 /* DetailCalendarTVC.xib in Resources */,
+				3D312DE62150C47100414ED2 /* PollCVC2.xib in Resources */,
 				3D4008832081AEBB003B600F /* BentonSansBBVA-Medium.otf in Resources */,
 				3D64E8CF2106FD610078C34B /* GoogleService-Info.plist in Resources */,
 				3D4008842081AEBB003B600F /* BentonSansBBVA-MediumItalic.otf in Resources */,
@@ -785,7 +789,6 @@
 				3D7623DE20872AC300C44139 /* BaseVC.swift in Sources */,
 				3D4B591920CA6C5000C44229 /* EvaluationService.swift in Sources */,
 				3D045C4B20E29F8400679D45 /* PollAspectTVC.swift in Sources */,
-				3DD6391A20C452B3001416AA /* AssistanceDetailLineVC.swift in Sources */,
 				3DEBD600209E4A6C00AAB031 /* MenuTVC.swift in Sources */,
 				3D06DE6F20B9535800241882 /* ActivitiesCVC.swift in Sources */,
 				3D297D6920FDD6E600164E00 /* EvaluationResultHTVC.swift in Sources */,
@@ -793,6 +796,7 @@
 				3DEBD62E20A17CE900AAB031 /* Constants.swift in Sources */,
 				3DA5B09820C645FF0001295C /* PollVC.swift in Sources */,
 				3D04FED52099646A00ABA9E9 /* ContainerVC.swift in Sources */,
+				3D312DE52150C47100414ED2 /* PollCVC2.swift in Sources */,
 				3D7623E0208D5A0B00C44139 /* DefaultAlamofireManager.swift in Sources */,
 				3D5C5E6320B3B4C400D6FF5E /* InvitationsCVC.swift in Sources */,
 				3DA5B09C20C75A100001295C /* SettingsBBVA.swift in Sources */,
@@ -967,7 +971,10 @@
 				DEVELOPMENT_TEAM = 4499WLXY9C;
 				INFOPLIST_FILE = Appformacion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Com.Qubicgo.AppFormacion.Ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -987,7 +994,10 @@
 				DEVELOPMENT_TEAM = 4499WLXY9C;
 				INFOPLIST_FILE = Appformacion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Com.Qubicgo.AppFormacion.Ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

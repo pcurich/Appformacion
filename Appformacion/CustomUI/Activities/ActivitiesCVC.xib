@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formacion de Asesores con per" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yOJ-un-D3E">
-                                <rect key="frame" x="120" y="20" width="471" height="18"/>
+                                <rect key="frame" x="120" y="30" width="471" height="18"/>
                                 <fontDescription key="fontDescription" name="BentonSansBBVA-Bold" family="Benton Sans BBVA" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -102,7 +102,7 @@
                             <constraint firstItem="xib-zd-goi" firstAttribute="top" secondItem="a4g-Av-ZSx" secondAttribute="top" id="dcb-g6-h1j"/>
                             <constraint firstAttribute="trailing" secondItem="xib-zd-goi" secondAttribute="trailing" id="eTg-Zl-o4m"/>
                             <constraint firstItem="kHc-aQ-JeS" firstAttribute="leading" secondItem="a4g-Av-ZSx" secondAttribute="leading" constant="20" id="jz9-u8-91h"/>
-                            <constraint firstItem="yOJ-un-D3E" firstAttribute="top" secondItem="a4g-Av-ZSx" secondAttribute="top" constant="20" id="oYw-RD-OAg"/>
+                            <constraint firstItem="yOJ-un-D3E" firstAttribute="top" secondItem="a4g-Av-ZSx" secondAttribute="top" constant="30" id="oYw-RD-OAg"/>
                             <constraint firstItem="kHc-aQ-JeS" firstAttribute="top" secondItem="Wyx-W8-wAG" secondAttribute="bottom" constant="20" id="p94-HA-KzH"/>
                             <constraint firstItem="kHc-aQ-JeS" firstAttribute="top" secondItem="lXA-XB-Qtp" secondAttribute="bottom" constant="20" id="pFx-lb-Ytg"/>
                             <constraint firstItem="Wyx-W8-wAG" firstAttribute="top" secondItem="a4g-Av-ZSx" secondAttribute="top" constant="20" id="xIu-nT-0no"/>

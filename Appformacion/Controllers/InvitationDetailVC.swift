@@ -25,7 +25,7 @@ class InvitationDetailVC: BaseVC {
     @IBOutlet weak var lblTitleTarget: UILabel!
     
     var listOfType : [InvitacionTipo] = []
-    var selectedType = InvitacionTipo(flag: 0, label: "", tipoRespuesta: "")
+    var selectedType = InvitacionTipo(flag: 0, label: "", code: "")
     
     var details: [CursoDetalle] = [] {
         didSet {
@@ -45,13 +45,16 @@ class InvitationDetailVC: BaseVC {
     }
     
     func setupDesing(){
-        self.lblTitle.text = curso?.nombre
-        self.lblTarget.text = curso?.objetivo
-        self.lblStartDate.text = curso?.fecha
-        self.lblTime.text = (curso?.horas)! + ":" + (curso?.minutos)! + " horas"
+        self.lblTitle.text = curso?.name
+        self.lblTarget.text = curso?.target
+        self.lblStartDate.text = curso?.date
+        self.lblTime.text = (curso?.hours)! + ":" + (curso?.minutes)! + " horas"
         
         self.lblTitleEvens.layer.addBorder(edge: UIRectEdge.bottom, color: UIColor.black, thickness: 1)
-        self.lblTitleTarget.layer.addBorder(edge: UIRectEdge.bottom, color: UIColor.black, thickness: 1)
+        self.lblTarget.flashScrollIndicators()
+        
+        //self.lblTitleTarget.layer.addBorder(edge: UIRectEdge.bottom, color: UIColor.black, thickness: 1)
+        
     }
     
     func setupViewNibs() {
@@ -69,10 +72,10 @@ extension InvitationDetailVC : UITableViewDataSource, UITableViewDelegate    {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! DetailCalendarTVC
         cell.selectionStyle = .none
-        cell.titleLabel.text = details[indexPath.row].fecha!
-        cell.noteLabel.text = details[indexPath.row].sala!
-        cell.startTimeLabel.text = details[indexPath.row].horaInicio!
-        cell.endTimeLabel.text = details[indexPath.row].horaFinal!
+        cell.titleLabel.text = details[indexPath.row].date
+        cell.noteLabel.text = details[indexPath.row].room
+        cell.startTimeLabel.text = details[indexPath.row].startTime
+        cell.endTimeLabel.text = details[indexPath.row].endTime
         return cell
     }
     
@@ -92,11 +95,11 @@ extension InvitationDetailVC:  UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let pickerLabel = UILabel()
-        if let name = listOfType[row].label {
-            let myTitle = NSAttributedString(string: name, attributes: [NSAttributedStringKey.font : UIFont(name: "BentonSansBBVA-Book", size: 15.0)!,NSAttributedStringKey.foregroundColor: UIColor.BBVADARKMEDIUMBLUE()])
-            pickerLabel.attributedText = myTitle
-            pickerLabel.textAlignment = .center
-        }
+        let name = listOfType[row].label
+        let myTitle = NSAttributedString(string: name, attributes: [NSAttributedStringKey.font : UIFont(name: "BentonSansBBVA-Book", size: 15.0)!,NSAttributedStringKey.foregroundColor: UIColor.BBVADARKMEDIUMBLUE()])
+        pickerLabel.attributedText = myTitle
+        pickerLabel.textAlignment = .center
+        
         return pickerLabel
     }
     
@@ -120,14 +123,14 @@ extension InvitationDetailVC:  UIPickerViewDelegate, UIPickerViewDataSource {
         let ok = UIAlertAction(title: "Enviar", style: .default, handler: {
             (UIAlertAction) in
             
-            InvitationService.responseInvitation(grupoId: (self.curso?.grupoId!)!, tipoRespuesta: self.selectedType.tipoRespuesta!, flag: self.selectedType.flag!, completionHandler: { (response) in
+            InvitationService.responseInvitation(grupoId: (self.curso?.groupId)!, tipoRespuesta: self.selectedType.code, flag: self.selectedType.flag , completionHandler: { (response) in
                 
                 UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                 
                 for detail in self.details {
                     self.Schedule(title: self.lblTitle.text!, detalle: detail )
                 }
-   
+                
                 if ( response){
                     self.gotoDashBoard()
                     self.navigationController?.isNavigationBarHidden = true
@@ -140,7 +143,7 @@ extension InvitationDetailVC:  UIPickerViewDelegate, UIPickerViewDataSource {
             })
             
         })
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in }
+        let cancel = UIAlertAction(title: "Cancelar", style: .cancel) { (action) -> Void in }
         
         alertView.addAction(ok)
         alertView.addAction(cancel)
@@ -153,7 +156,7 @@ extension InvitationDetailVC:  UIPickerViewDelegate, UIPickerViewDataSource {
 // MARK: Prepere dataSource
 extension InvitationDetailVC {
     func getDetails() {
-        InvitationService.getDetails(horarioId: (curso?.horarioId)!) { (response) in
+        InvitationService.getDetails(horarioId: (curso?.scheduleId)!) { (response) in
             self.details = response
         }
     }
@@ -173,8 +176,8 @@ extension InvitationDetailVC : UNUserNotificationCenterDelegate {
     
     func Schedule(title: String ,detalle : CursoDetalle ) {
         
-        let strDate = detalle.fecha! + " " + detalle.horaInicio!
-      
+        let strDate = detalle.date  + " " + detalle.startTime
+        
         let formatter = "dd/MM/yyyy hh:mm"
         let calendar = Calendar.current
         let date = CustomHelper.toDate(str: strDate , formate: formatter)
@@ -191,10 +194,10 @@ extension InvitationDetailVC : UNUserNotificationCenterDelegate {
         let contenido = UNMutableNotificationContent()
         contenido.title = "Recordatorio"
         contenido.subtitle = title
-        contenido.body = "Recordatorio para la asistencia que se llevara a cabo en: " + detalle.sala!
+        contenido.body = "Recordatorio para la asistencia que se llevara a cabo en: " + detalle.room
         contenido.sound = UNNotificationSound.default()
         
-        let request = UNNotificationRequest(identifier: detalle.fechaInicioFormato!, content: contenido, trigger: trigger)
+        let request = UNNotificationRequest(identifier: detalle.dateFormat, content: contenido, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {

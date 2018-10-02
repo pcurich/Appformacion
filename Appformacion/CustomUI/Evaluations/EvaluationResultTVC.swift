@@ -22,9 +22,9 @@ class EvaluationResultTVC: UITableViewCell {
     var type: String! {
         didSet {
             if(type == "RPTA_COR"){
-                imgCircle.backgroundColor = UIColor.green
+                imgCircle.image = UIImage(named: "correct.png")!
             }else {
-                imgCircle.backgroundColor = UIColor.red
+                imgCircle.image = UIImage(named: "incorrect.png")!
             }
         }
     }

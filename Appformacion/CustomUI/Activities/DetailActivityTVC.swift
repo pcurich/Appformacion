@@ -27,22 +27,22 @@ class DetailActivityTVC: UITableViewCell {
     @IBOutlet weak var lblSubtitle2: UILabel!
     var detalle: ActividadDetalle! {
         didSet {
-            let fecha = formatter.date(from:detalle.fecha!)
+            let fecha = formatter.date(from:detalle.date)
             let ahora = Date()
             var color = UIColor.green
             
             if(fecha == ahora){
                 color = UIColor.yellow
             }
-            if((ahora > fecha!) && (detalle.marcoAsistencia=="NO")){
+            if((ahora > fecha!) && (detalle.markAssistence=="NO")){
                 color = UIColor.red
             }
             
-            lblSubTitle?.text = detalle.nombre
-            lblTitle?.text = detalle.fecha
-            lblEnd?.text = detalle.horaFinal
-            lblStart?.text = detalle.horaInicio
-            lblSubtitle2?.text = detalle.direccion
+            lblSubTitle?.text = detalle.room
+            lblTitle?.text = detalle.date
+            lblEnd?.text = detalle.startTime
+            lblStart?.text = detalle.endTime
+            lblSubtitle2?.text = detalle.address
             imgCircle?.backgroundColor = color
             imgCircle?.layer.cornerRadius = (imgCircle?.frame.size.width)! / 2
             imgCircle?.clipsToBounds = true
