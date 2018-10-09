@@ -13,25 +13,33 @@ import GoogleSignIn
 class SideBarMenuTVC: UITableViewController {
     
     let cellIdentifier = "MenuTVC"
+    let cellHeaderIdentifier = "MenuHTVC"
     
+    /*
     @IBOutlet weak var vista: UIView!
     @IBOutlet weak var imgImagen: UIImageView!
     @IBOutlet weak var gooSignIn: GIDSignInButton!
     @IBOutlet weak var gooSignOut: UIButton!
-    
-    var menu : [MenuBBVA] = []
+    */
+    var headerMenu : [MenuHeader2] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNib()
         getMenu()
-        getSetup()
+        //getSetup()
+    }
+    
+    func setupNib(){
+        let nibCell = UINib(nibName: cellIdentifier, bundle: Bundle.main)
+        tableView.register(nibCell, forCellReuseIdentifier: cellIdentifier)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        for m in menu {
-            if m.order == (indexPath.row + 1)
-            {
+        for m in headerMenu[indexPath.section].menu
+        {
+            if m.order == (indexPath.row + 1) {
                 NotificationCenter.default.post(name: NSNotification.Name(m.goto), object: nil)
             }
         }
@@ -45,40 +53,57 @@ class SideBarMenuTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.menu.count
+        return (headerMenu[section].menu.count)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var name : String = ""
+        var item : MenuBBVA2!
         
-        for m in menu {
+        for m in headerMenu[indexPath.section].menu {
             if m.order == (indexPath.row + 1)
             {
-                name = m.name
+                item = m
                 break
             }
         }
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier ) as? MenuTVC
         {
-            cell.itemMenu.text = name
+            cell.item = item
             return cell
         }
         return UITableViewCell()
-        
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return headerMenu.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = Bundle.main.loadNibNamed(cellHeaderIdentifier, owner: self, options: nil)?.first as! MenuHTVC
+        cell.menuHeader = headerMenu[section]
+        return cell
     }
 }
 
 extension SideBarMenuTVC  {
     func getMenu(){
-        let _menu = RealmService.shared.realm.objects(MenuBBVA.self)
-        for i in _menu {
-            menu.append(
-                MenuBBVA(visible: i.visible, name: i.name, order: i.order, goto: i.goto))
-        }
+        /*
+         let _menu = RealmService.shared.realm.objects(MenuBBVA.self)
+         for i in _menu {
+         menu.append(
+         MenuBBVA(visible: i.visible, name: i.name, order: i.order, goto: i.goto))
+         }
+         */
+        headerMenu = MenuHeader2.getMenu()
     }
     
+    /*
     func getSetup(){ 
         imgImagen.setRounded()
         GIDSignIn.sharedInstance().delegate = self
@@ -98,8 +123,9 @@ extension SideBarMenuTVC  {
             
         }
     }
+ */
 }
-
+/*
 extension SideBarMenuTVC : GIDSignInDelegate, GIDSignInUIDelegate {
     
     func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
@@ -131,12 +157,12 @@ extension SideBarMenuTVC : GIDSignInDelegate, GIDSignInUIDelegate {
             }
         }
     }
-    
-    @IBAction func salir(_ sender: Any) {
-        closeSesion()
-        UserService.deleteUserGOOGLE()
-    }
-    
+ 
+ @IBAction func salir(_ sender: Any) {
+ closeSesion()
+ UserService.deleteUserGOOGLE()
+ }
+ 
     func closeSesion(){
         GIDSignIn.sharedInstance().signOut()
         gooSignIn.isHidden = true
@@ -144,5 +170,6 @@ extension SideBarMenuTVC : GIDSignInDelegate, GIDSignInUIDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    
+ 
 }
+*/

@@ -17,8 +17,21 @@ class ActivitiesCVC: UICollectionViewCell {
     @IBOutlet weak var lblProgress: UILabel!
     @IBOutlet weak var typeOfInvitation: UILabel!
     
+    @IBOutlet weak var type: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    var item : Int = 0 {
+        didSet {
+            if(item%2>0){
+                type.backgroundColor = UIColor.BBVALIGHTBLUE()
+            }
+            else{
+                type.backgroundColor = UIColor.BBVADARKAQUA()
+                
+            }
+        }
     }
     
     var actividad: ActividadesProgramadas! {

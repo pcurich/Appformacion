@@ -61,21 +61,57 @@ class DashboardVC : BaseVC{
         
         // se le esta seteando los valores de los identificadores para cada
         //
+        
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(showAct),
-                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoActividades), object: nil)
+                                               selector: #selector(showDas),
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoDashboard),
+                                               object: nil)
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(showInv),
-                                               name: NSNotification.Name(Constants.SIDEBARMENU.goToInvitaciones), object: nil)
-        
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.goToInvitaciones),
+                                               object: nil)
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(showCal),
-                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoCalendario), object: nil)
-        
+                                               selector: #selector(showAct),
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoActividades),
+                                               object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(showAsi),
-                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoAsistencia), object: nil)
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoAsistencia),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showEva),
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoEvaluaciones),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showEnc),
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoEncuestas),
+                                               object: nil)
+        
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showMat),
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoMateriales),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showCal),
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoCalendario),
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showPls),
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoGooglePlus),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showCmp),
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoCampus),
+                                               object: nil)
+        
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showCls),
+                                               name: NSNotification.Name(Constants.SIDEBARMENU.gotoCerrar),
+                                               object: nil)
      
     }
     
@@ -101,23 +137,52 @@ class DashboardVC : BaseVC{
         }
         
     }
-   
-    @objc func showAct(){
-        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoActividades, sender: nil)
+    
+    @objc func showDas(){
+        //performSegue(withIdentifier: Constants.SIDEBARMENU.gotoDashboard, sender: nil)
+        
+        //gotoDashBoard()
     }
     
     @objc func showInv(){
         performSegue(withIdentifier: Constants.SIDEBARMENU.goToInvitaciones, sender: nil)
     }
     
-    @objc func showCal(){
-        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoCalendario, sender: nil)
+    @objc func showAct(){
+        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoActividades, sender: nil)
     }
     
     @objc func showAsi(){
         performSegue(withIdentifier: Constants.SIDEBARMENU.gotoAsistencia, sender: nil)
     }
     
+    @objc func showEva(){
+        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoEvaluaciones, sender: nil)
+    }
+    
+    @objc func showEnc(){
+        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoEncuestas, sender: nil)
+    }
+    
+    @objc func showMat(){
+        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoMateriales, sender: nil)
+    }
+    
+    @objc func showCal(){
+        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoCalendario, sender: nil)
+    }
+    
+    @objc func showPls(){
+        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoGooglePlus, sender: nil)
+    }
+    
+    @objc func showCmp(){
+        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoCampus, sender: nil)
+    }
+    
+    @objc func showCls(){
+        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoCerrar, sender: nil)
+    }
 }
 
 extension DashboardVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

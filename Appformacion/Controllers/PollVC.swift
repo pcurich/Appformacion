@@ -57,6 +57,11 @@ class PollVC: BaseVC {
         self.navigationItem.titleView = setNavegationTitle(title: "Encuestas Activas")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getPolls()
+    }
+    
     func setupNib(){
         let nibCell = UINib(nibName: cellIdentifier, bundle: Bundle.main)
         tableView.register(nibCell, forCellReuseIdentifier: cellIdentifier)
@@ -73,6 +78,7 @@ extension PollVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = Bundle.main.loadNibNamed(cellHeaderIdentifier, owner: self, options: nil)?.first as! PollAspectHTVC
         cell.poll = pollList[section]
+        cell.item = section
         return cell
     }
     

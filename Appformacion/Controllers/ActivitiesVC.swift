@@ -55,6 +55,11 @@ class ActivitiesVC: BaseVC {
         self.navigationItem.titleView = setNavegationTitle(title: "Actividades Programadas")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getActivities()
+    }
+    
     func setupNib(){
         let nibCell = UINib(nibName: cellIdentifier, bundle: Bundle.main)
         collectionView.register(nibCell, forCellWithReuseIdentifier: cellIdentifier)
@@ -85,6 +90,7 @@ extension ActivitiesVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ActivitiesCVC
         cell.actividad = activities[indexPath.row]
+        cell.item = indexPath.row
         return cell
     }
     

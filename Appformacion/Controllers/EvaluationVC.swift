@@ -41,6 +41,11 @@ class EvaluationVC: BaseVC {
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getEvaluations()
+    }
+    
     func startView(){
         activityIndicator()
         startIndicator()
@@ -71,6 +76,7 @@ extension EvaluationVC : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = Bundle.main.loadNibNamed(cellHeaderIdentifier, owner: self, options: nil)?.first as! EvaluationAspectHTVC
         cell.evaluation = evaluationList[section]
+        cell.item = section
         return cell
     }
     

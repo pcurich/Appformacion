@@ -43,6 +43,14 @@ extension UIColor {
         }
     }
     
+    class func BBVALIGHTBLUE() -> UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "4_BBVALIGHTBLUE")!
+        } else {
+            return UIColor(displayP3Red: 91, green: 190, blue: 255, alpha: 1)
+        }
+    }
+    
     class func BBVAMEDIUMBLUE() -> UIColor {
         if #available(iOS 11.0, *) {
             return UIColor(named: "3_BBVAMEDIUMBLUE")!

@@ -80,11 +80,23 @@ struct Constants {
     
     struct SIDEBARMENU {
         static let showSideBarMenu = "toggleSideBarMenu"
+        
+        static let gotoDashboard = "gotoDas"
+        
         static let goToInvitaciones = "gotoInv"
         static let gotoActividades = "gotoAct"
-        static let gotoCalendario = "gotoCal"
         static let gotoAsistencia = "gotoAsi"
-        static let gotoDashboard = "gotoDas" 
+        static let gotoEvaluaciones = "gotoEva"
+        static let gotoEncuestas = "gotoEnc"
+        
+        static let gotoMateriales = "gotoMat"
+        static let gotoCalendario = "gotoCal"
+        
+        static let gotoGooglePlus = "gotoPls"
+        static let gotoCampus = "gotoCmp"
+        
+        static let gotoCerrar = "gotoCls"
+        
     }
     
     struct MEDIDAS {

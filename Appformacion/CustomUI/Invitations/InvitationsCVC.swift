@@ -15,6 +15,17 @@ class InvitationsCVC: UICollectionViewCell {
     @IBOutlet weak var comment: UILabel!
     @IBOutlet weak var typeOfInvitation: UILabel!
     
+    var item : Int = 0 {
+        didSet {
+            if(item%2>0){
+                imgType.backgroundColor = UIColor.BBVALIGHTBLUE()
+            }
+            else{
+                imgType.backgroundColor = UIColor.BBVADARKAQUA() 
+            }
+        }
+    }
+    
     var invitation: CursosPendientesAceptacion! {
         didSet {
             let duracion : String = "Duracion: " + invitation.hours + ":" + invitation.minutes

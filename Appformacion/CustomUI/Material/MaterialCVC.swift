@@ -20,6 +20,17 @@ class MaterialCVC: UICollectionViewCell {
         
     }
     
+    var item : Int = 0 {
+        didSet {
+            if(item%2>0){
+                imgSquare.backgroundColor = UIColor.BBVALIGHTBLUE()
+            }
+            else{
+                imgSquare.backgroundColor = UIColor.BBVADARKAQUA()
+            }
+        }
+    }
+    
     var material: MaterialDetail! {
         didSet {
             lblTitle.text = material.name

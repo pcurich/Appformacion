@@ -112,6 +112,7 @@
             </constraints>
             <size key="customSize" width="341" height="97"/>
             <connections>
+                <outlet property="imgType" destination="qX7-S7-5nw" id="0d3-cb-cuK"/>
                 <outlet property="lblSubTitle" destination="d5f-cy-DOs" id="GVG-Au-3ft"/>
                 <outlet property="lblTitle" destination="I1k-EI-5os" id="xH9-j2-IBq"/>
                 <outlet property="typeOfInvitation" destination="tNQ-UK-IdR" id="OU1-kS-GEo"/>

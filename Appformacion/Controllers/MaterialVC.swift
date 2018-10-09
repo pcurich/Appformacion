@@ -48,6 +48,11 @@ class MaterialVC: BaseVC {
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getMaterials()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationItem.titleView = setNavegationTitle(title: "Materiales Disponibles")
@@ -82,7 +87,8 @@ extension MaterialVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! MaterialCVC
-        cell.material = self.materials[indexPath.row] 
+        cell.material = self.materials[indexPath.row]
+        cell.item = indexPath.row
         return cell
     }
     

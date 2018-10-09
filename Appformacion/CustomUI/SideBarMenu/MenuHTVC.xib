@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BentonSansBBVA-Bold.otf">
+            <string>BentonSansBBVA-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuHTVC" rowHeight="80" id="KGk-i7-Jjw" customClass="MenuHTVC" customModule="Appformacion" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gmg-Qy-Qi9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="4"/>
+                        <color key="backgroundColor" name="2_BBVACOREBLUE"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="nTu-NE-wGZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-dI-ftP">
+                        <rect key="frame" x="26" y="14" width="268" height="9"/>
+                        <fontDescription key="fontDescription" name="BentonSansBBVA-Bold" family="Benton Sans BBVA" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="gmg-Qy-Qi9" secondAttribute="trailing" id="ByM-Wn-14f"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cR7-dI-ftP" secondAttribute="bottom" constant="10" id="ZDF-hH-SmH"/>
+                    <constraint firstItem="cR7-dI-ftP" firstAttribute="top" secondItem="gmg-Qy-Qi9" secondAttribute="bottom" constant="10" id="gtb-rj-Sky"/>
+                    <constraint firstItem="gmg-Qy-Qi9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="j5g-UB-v6Z"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cR7-dI-ftP" secondAttribute="trailing" constant="10" id="tDD-N2-moa"/>
+                    <constraint firstItem="gmg-Qy-Qi9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tye-b8-QWT"/>
+                    <constraint firstItem="cR7-dI-ftP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="yBz-Js-J55"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="header" destination="cR7-dI-ftP" id="0iG-xV-JkA"/>
+                <outlet property="imagen" destination="gmg-Qy-Qi9" id="WEr-tw-ztL"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="99"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="2_BBVACOREBLUE">
+            <color red="0.0" green="0.2669999897480011" blue="0.50599998235702515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

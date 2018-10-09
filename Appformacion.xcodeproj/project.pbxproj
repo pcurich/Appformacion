@@ -19,6 +19,11 @@
 		3D06DE7A20BA9DE400241882 /* ActivityDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06DE7920BA9DE400241882 /* ActivityDetailVC.swift */; };
 		3D06DE8020BAF1E200241882 /* DetailActivityTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06DE7E20BAF1E200241882 /* DetailActivityTVC.swift */; };
 		3D06DE8120BAF1E200241882 /* DetailActivityTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D06DE7F20BAF1E200241882 /* DetailActivityTVC.xib */; };
+		3D0C58672163DFED0020EC5D /* MenuBBVA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0C58662163DFED0020EC5D /* MenuBBVA2.swift */; };
+		3D0C586A2163EEE80020EC5D /* MenuHTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0C58682163EEE80020EC5D /* MenuHTVC.swift */; };
+		3D0C586B2163EEE80020EC5D /* MenuHTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D0C58692163EEE80020EC5D /* MenuHTVC.xib */; };
+		3D0C586D216419E10020EC5D /* GooglePlusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0C586C216419E10020EC5D /* GooglePlusVC.swift */; };
+		3D0C586F21641B620020EC5D /* CampusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0C586E21641B620020EC5D /* CampusVC.swift */; };
 		3D20363020AA086C007F0CE7 /* DetailCalendarTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20362F20AA086C007F0CE7 /* DetailCalendarTVC.swift */; };
 		3D20363220AA097F007F0CE7 /* DetailCalendarTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D20363120AA097F007F0CE7 /* DetailCalendarTVC.xib */; };
 		3D2083CC2082860800718C38 /* UserBBVA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2083CB2082860800718C38 /* UserBBVA.swift */; };
@@ -41,7 +46,7 @@
 		3D4008832081AEBB003B600F /* BentonSansBBVA-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D40087E2081ADB3003B600F /* BentonSansBBVA-Medium.otf */; };
 		3D4008842081AEBB003B600F /* BentonSansBBVA-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D4008792081ADB3003B600F /* BentonSansBBVA-MediumItalic.otf */; };
 		3D40088B2081DD0C003B600F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D40088A2081DD0C003B600F /* Extensions.swift */; };
-		3D40088D2081F8CE003B600F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D40088C2081F8CD003B600F /* Assets.xcassets */; };
+		3D40088D2081F8CE003B600F /* m.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D40088C2081F8CD003B600F /* m.xcassets */; };
 		3D40089120820471003B600F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D40089020820471003B600F /* UserService.swift */; };
 		3D400895208243D3003B600F /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D400894208243D3003B600F /* AlertHelper.swift */; };
 		3D47C0A920E50C8E00060A93 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47C0A820E50C8D00060A93 /* Poll.swift */; };
@@ -76,6 +81,7 @@
 		3D82BA0F20CA607500A6F9CE /* EvaluationDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D82BA0E20CA607500A6F9CE /* EvaluationDetailsVC.swift */; };
 		3D839810209AD741005EEE3E /* SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83980F209AD740005EEE3E /* SwiftJSON.swift */; };
 		3D839812209ADB9C005EEE3E /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D839811209ADB9C005EEE3E /* DashboardService.swift */; };
+		3DA47C29216367800050030C /* MenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA47C28216367800050030C /* MenuTVC.xib */; };
 		3DA5B09420C5732D0001295C /* PollSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5B09320C5732D0001295C /* PollSettings.swift */; };
 		3DA5B09620C5750E0001295C /* PollService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5B09520C5750E0001295C /* PollService.swift */; };
 		3DA5B09820C645FF0001295C /* PollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5B09720C645FF0001295C /* PollVC.swift */; };
@@ -145,6 +151,11 @@
 		3D06DE7920BA9DE400241882 /* ActivityDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailVC.swift; sourceTree = "<group>"; };
 		3D06DE7E20BAF1E200241882 /* DetailActivityTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailActivityTVC.swift; sourceTree = "<group>"; };
 		3D06DE7F20BAF1E200241882 /* DetailActivityTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailActivityTVC.xib; sourceTree = "<group>"; };
+		3D0C58662163DFED0020EC5D /* MenuBBVA2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBBVA2.swift; sourceTree = "<group>"; };
+		3D0C58682163EEE80020EC5D /* MenuHTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHTVC.swift; sourceTree = "<group>"; };
+		3D0C58692163EEE80020EC5D /* MenuHTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHTVC.xib; sourceTree = "<group>"; };
+		3D0C586C216419E10020EC5D /* GooglePlusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlusVC.swift; sourceTree = "<group>"; };
+		3D0C586E21641B620020EC5D /* CampusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusVC.swift; sourceTree = "<group>"; };
 		3D20362F20AA086C007F0CE7 /* DetailCalendarTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalendarTVC.swift; sourceTree = "<group>"; };
 		3D20363120AA097F007F0CE7 /* DetailCalendarTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCalendarTVC.xib; sourceTree = "<group>"; };
 		3D2083CB2082860800718C38 /* UserBBVA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBBVA.swift; sourceTree = "<group>"; };
@@ -169,7 +180,7 @@
 		3D40087D2081ADB3003B600F /* BentonSansBBVA-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSansBBVA-Bold.otf"; sourceTree = "<group>"; };
 		3D40087E2081ADB3003B600F /* BentonSansBBVA-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSansBBVA-Medium.otf"; sourceTree = "<group>"; };
 		3D40088A2081DD0C003B600F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		3D40088C2081F8CD003B600F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D40088C2081F8CD003B600F /* m.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = m.xcassets; sourceTree = "<group>"; };
 		3D40089020820471003B600F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		3D400894208243D3003B600F /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		3D47C0A820E50C8D00060A93 /* Poll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
@@ -205,6 +216,7 @@
 		3D82BA0E20CA607500A6F9CE /* EvaluationDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationDetailsVC.swift; sourceTree = "<group>"; };
 		3D83980F209AD740005EEE3E /* SwiftJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftJSON.swift; sourceTree = "<group>"; };
 		3D839811209ADB9C005EEE3E /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
+		3DA47C28216367800050030C /* MenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVC.xib; sourceTree = "<group>"; };
 		3DA5B09320C5732D0001295C /* PollSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollSettings.swift; sourceTree = "<group>"; };
 		3DA5B09520C5750E0001295C /* PollService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollService.swift; sourceTree = "<group>"; };
 		3DA5B09720C645FF0001295C /* PollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollVC.swift; sourceTree = "<group>"; };
@@ -287,6 +299,9 @@
 				3D04FED42099646A00ABA9E9 /* ContainerVC.swift */,
 				3D04FED720996F5C00ABA9E9 /* SideBarMenuTVC.swift */,
 				3DEBD5FF209E4A6C00AAB031 /* MenuTVC.swift */,
+				3DA47C28216367800050030C /* MenuTVC.xib */,
+				3D0C58682163EEE80020EC5D /* MenuHTVC.swift */,
+				3D0C58692163EEE80020EC5D /* MenuHTVC.xib */,
 			);
 			path = SideBarMenu;
 			sourceTree = "<group>";
@@ -313,6 +328,7 @@
 				3D2083CB2082860800718C38 /* UserBBVA.swift */,
 				3DE1DFD920BD9EBE00CA0AC1 /* UserGOOGLE.swift */,
 				3D5C6D74209CB4170007B7F2 /* MenuBBVA.swift */,
+				3D0C58662163DFED0020EC5D /* MenuBBVA2.swift */,
 				3DEBD62B20A17B7800AAB031 /* EventCalendar.swift */,
 				3D5C6D72209C2B380007B7F2 /* SideBarMenu.swift */,
 				3DD866CD20B1600C00491B88 /* Dashboard.swift */,
@@ -365,7 +381,7 @@
 				3D64E8CE2106FD610078C34B /* GoogleService-Info.plist */,
 				3D64E8CD2106FCCA0078C34B /* Appformacion.entitlements */,
 				3DD866C720B0B26200491B88 /* CustomUI */,
-				3D40088C2081F8CD003B600F /* Assets.xcassets */,
+				3D40088C2081F8CD003B600F /* m.xcassets */,
 				3D4008782081AD71003B600F /* Fonts */,
 				3D40087120818A7A003B600F /* Controllers */,
 				3D2083CA208285EB00718C38 /* Model */,
@@ -393,6 +409,8 @@
 				3D06DE7920BA9DE400241882 /* ActivityDetailVC.swift */,
 				3DE1DFD120BD149C00CA0AC1 /* AssistanceVC.swift */,
 				3DE1DFD320BD14E900CA0AC1 /* AssistanceDetailVC.swift */,
+				3D0C586C216419E10020EC5D /* GooglePlusVC.swift */,
+				3D0C586E21641B620020EC5D /* CampusVC.swift */,
 				3DE1DFE420BE88FB00CA0AC1 /* MaterialVC.swift */,
 				3DE1DFE620BEECD600CA0AC1 /* MaterialDetailVC.swift */,
 				3DA5B09720C645FF0001295C /* PollVC.swift */,
@@ -663,16 +681,18 @@
 				3D40087720818F12003B600F /* LaunchScreen.storyboard in Resources */,
 				3DE1DFDF20BE83E500CA0AC1 /* MaterialCVC.xib in Resources */,
 				3D61372C20F7481F00F11EF8 /* EvaluationCVC.xib in Resources */,
-				3D40088D2081F8CE003B600F /* Assets.xcassets in Resources */,
+				3D40088D2081F8CE003B600F /* m.xcassets in Resources */,
 				3DE1DFCE20BD119500CA0AC1 /* AssistanceCVC.xib in Resources */,
 				3D47C0B020E9997B00060A93 /* PollAspectHTVC.xib in Resources */,
 				3D5C5E5920B1E6B500D6FF5E /* ButtonCVC.xib in Resources */,
 				3DF255B420CFB1350093D2E1 /* Main.storyboard in Resources */,
 				3D37130B20D78CBB00EA5075 /* EvaluationAspectTVC.xib in Resources */,
 				3D06DE8120BAF1E200241882 /* DetailActivityTVC.xib in Resources */,
+				3D0C586B2163EEE80020EC5D /* MenuHTVC.xib in Resources */,
 				3D297D6A20FDD6E600164E00 /* EvaluationResultHTVC.xib in Resources */,
 				3D045C4C20E29F8400679D45 /* PollAspectTVC.xib in Resources */,
 				3D61372820F747A700F11EF8 /* EvaluationAspectHTVC.xib in Resources */,
+				3DA47C29216367800050030C /* MenuTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +810,8 @@
 				3D4B591920CA6C5000C44229 /* EvaluationService.swift in Sources */,
 				3D045C4B20E29F8400679D45 /* PollAspectTVC.swift in Sources */,
 				3DEBD600209E4A6C00AAB031 /* MenuTVC.swift in Sources */,
+				3D0C58672163DFED0020EC5D /* MenuBBVA2.swift in Sources */,
+				3D0C586D216419E10020EC5D /* GooglePlusVC.swift in Sources */,
 				3D06DE6F20B9535800241882 /* ActivitiesCVC.swift in Sources */,
 				3D297D6920FDD6E600164E00 /* EvaluationResultHTVC.swift in Sources */,
 				3D61373220FC3C5E00F11EF8 /* EvaluationResultVC.swift in Sources */,
@@ -803,6 +825,7 @@
 				3D04FED820996F5C00ABA9E9 /* SideBarMenuTVC.swift in Sources */,
 				3D82BA0D20CA602000A6F9CE /* EvaluationVC.swift in Sources */,
 				3DDFB64220C4C93B0056F2B9 /* AssistanceDetailTVC.swift in Sources */,
+				3D0C586F21641B620020EC5D /* CampusVC.swift in Sources */,
 				3DEBD60520A02D4300AAB031 /* CalendarVC.swift in Sources */,
 				3DE1DFE120BE87BE00CA0AC1 /* MaterialService.swift in Sources */,
 				3D839812209ADB9C005EEE3E /* DashboardService.swift in Sources */,
@@ -828,6 +851,7 @@
 				3DE1DFDA20BD9EBE00CA0AC1 /* UserGOOGLE.swift in Sources */,
 				3DFCD56620B5D6300079E4F0 /* InvitationDetailVC.swift in Sources */,
 				3D5C6D71209C08520007B7F2 /* EnrollService.swift in Sources */,
+				3D0C586A2163EEE80020EC5D /* MenuHTVC.swift in Sources */,
 				3DD866CE20B1600C00491B88 /* Dashboard.swift in Sources */,
 				3D40086020818A65003B600F /* AppDelegate.swift in Sources */,
 				3D47C0AF20E9997B00060A93 /* PollAspectHTVC.swift in Sources */,

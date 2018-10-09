@@ -55,6 +55,11 @@ class InvitationsVC: BaseVC {
         self.navigationItem.titleView = setNavegationTitle(title: "Invitaciones por Responder")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getInvitations()
+    }
+    
     func setupNib(){
         let nibCell = UINib(nibName: cellIdentifier, bundle: Bundle.main)
         collectionView.register(nibCell, forCellWithReuseIdentifier: cellIdentifier)
@@ -88,6 +93,7 @@ extension InvitationsVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! InvitationsCVC
         cell.invitation = invitations[indexPath.row]
+        cell.item = indexPath.row
         return cell
     }
     

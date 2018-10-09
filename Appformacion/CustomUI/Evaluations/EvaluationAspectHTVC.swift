@@ -19,6 +19,17 @@ class EvaluationAspectHTVC: UITableViewCell {
         imgSquare.addShadow()
     }
     
+    var item : Int = 0 {
+        didSet {
+            if(item%2>0){
+                imgSquare.backgroundColor = UIColor.BBVALIGHTBLUE()
+            }
+            else{
+                imgSquare.backgroundColor = UIColor.BBVADARKAQUA()
+            }
+        }
+    }
+    
     var evaluation : EvaluationList! {
         didSet {
             
