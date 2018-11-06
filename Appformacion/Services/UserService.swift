@@ -29,16 +29,22 @@ class UserService  {
         
         DefaultAlamofireManager.sharedInstance.request(urlRequest).responseString { (response) in
             let cookies = HTTPCookieStorage.shared.cookies
+            var result = false
+            
             for cookie in cookies! {
-                if cookie.name == "PD-S-SESSION-ID" || cookie.name == "PD-ID" {
-                    DispatchQueue.main.async {
-                        completionHandler("OK")
-                    }
+                if cookie.name.uppercased() == "PD-S-SESSION-ID" || cookie.name.uppercased() == "PD-ID" {
+                    result = true
                 }
                 debugPrint("name = " + cookie.name + " | " + "value = " + cookie.value )
             }
-            DispatchQueue.main.async {
-                completionHandler("ERROR")
+            if(result){
+                DispatchQueue.main.async {
+                    completionHandler("OK")
+                }
+            }else{
+                DispatchQueue.main.async {
+                    completionHandler("ERROR")
+                }
             }
         }
     }

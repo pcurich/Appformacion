@@ -116,7 +116,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
             self.closeSession()
             return false
         }
-        guard let _ : String = headers["X-MULE_SESSION"] else {
+        
+        if(headers["x-mule_session"]==nil && headers["X-MULE_SESSION"]==nil){
             self.closeSession()
             return false
         }
@@ -131,11 +132,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
             if(currentViewController is BaseVC?){
                 (currentViewController as! BaseVC?)?.close()
             }
-            /*
-             else if(currentViewController is BaseCollectionViewController!){
-             (currentViewController as! BaseCollectionViewController!).close()
-             }
-             */
         }
     }
 }

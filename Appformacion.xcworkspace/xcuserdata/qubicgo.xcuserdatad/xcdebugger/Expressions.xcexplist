@@ -101,18 +101,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in closure #1 in static AssistanceService.getAssistanceDetails(register:salaId:completionHandler:):AssistanceService.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "assistence.body?.values.first">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "PollVC.tableView(_:cellForRowAt:):PollVC.swift">
          <PersistentStrings>
             <PersistentString
                value = "pollList[indexPath.section].aspects[indexPath.row]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in static AssistanceService.getAssistanceDetails(register:salaId:completionHandler:):AssistanceService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "assistence.body?.values.first">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -175,13 +175,13 @@
          contextName = "closure #1 in closure #1 in static PollService.getPolls(register:completionHandler:):PollService.swift">
          <PersistentStrings>
             <PersistentString
-               value = "polls.body">
+               value = "polls.body![poll].aspects[aspect].questions">
             </PersistentString>
             <PersistentString
                value = "t_aspect.resposeType">
             </PersistentString>
             <PersistentString
-               value = "polls.body![poll].aspects[aspect].questions">
+               value = "polls.body">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -197,13 +197,13 @@
          contextName = "PollQuestionVC.tableView(_:willDisplay:forRowAt:):PollQuestionVC.swift">
          <PersistentStrings>
             <PersistentString
-               value = "currentAspect?.elementos!.count">
+               value = "currentAspect.aspectoDetalle">
             </PersistentString>
             <PersistentString
                value = "indexPath.row">
             </PersistentString>
             <PersistentString
-               value = "currentAspect.aspectoDetalle">
+               value = "currentAspect?.elementos!.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -310,10 +310,21 @@
          contextName = "ActivityDetailVC.tableView(_:cellForRowAt:):ActivityDetailVC.swift">
          <PersistentStrings>
             <PersistentString
-               value = "details[indexPath.row]">
+               value = " cell.lblTitle">
             </PersistentString>
             <PersistentString
-               value = " cell.lblTitle">
+               value = "details[indexPath.row]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.sessionValid(response:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "headers[&quot;x-mule_session&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "headers[&quot;X-MULE_SESSION&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -396,6 +407,14 @@
          contextName = "objc_exception_rethrow:(null)">
       </ContextState>
       <ContextState
+         contextName = "MaterialVC.collectionView(_:cellForItemAt:):MaterialVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "PollTVC.pregunta.didset:PollTVC.swift">
          <PersistentStrings>
             <PersistentString
@@ -475,18 +494,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SessionManager.request(_:):SessionManager.swift">
+         contextName = "static PollService.save(grupoPersonaId:scheduleId:respuestaEncuesta:completionHandler:):PollService.swift">
          <PersistentStrings>
             <PersistentString
-               value = "originalRequest">
+               value = "String(respuestaEncuesta.filter { !&quot;\n\r&quot;.contains($0) })">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in closure #1 in static PollService.getQuestions(grupoId:indicador:completionHandler:):PollService.swift">
+         contextName = "SessionManager.request(_:):SessionManager.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.aspects">
+               value = "originalRequest">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -502,10 +521,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "static PollService.save(grupoPersonaId:scheduleId:respuestaEncuesta:completionHandler:):PollService.swift">
+         contextName = "closure #1 in closure #1 in static PollService.getQuestions(grupoId:indicador:completionHandler:):PollService.swift">
          <PersistentStrings>
             <PersistentString
-               value = "String(respuestaEncuesta.filter { !&quot;\n\r&quot;.contains($0) })">
+               value = "self.aspects">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -627,6 +646,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "MenuTVC.item.didset:MenuTVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "item">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CGFloat.fitSizeLabel(size:limit:):Extensions.swift">
          <PersistentStrings>
             <PersistentString
@@ -646,13 +673,13 @@
          contextName = "DetailCalendarTVC.fechaValue.didset:DetailCalendarTVC.swift">
          <PersistentStrings>
             <PersistentString
-               value = "titleLabel.text">
+               value = "fechaValue">
             </PersistentString>
             <PersistentString
                value = "fechaValue.grupoNombre!">
             </PersistentString>
             <PersistentString
-               value = "fechaValue">
+               value = "titleLabel.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -720,6 +747,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "PollAspectTVC.aspect.didset:PollAspectTVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "aspect?.description">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in EvaluationDetailsVC.nextQuestion(_:):EvaluationDetailsVC.swift">
          <PersistentStrings>
             <PersistentString
@@ -733,14 +768,6 @@
             </PersistentString>
             <PersistentString
                value = "JSON(self.evaluationResponse)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "PollAspectTVC.aspect.didset:PollAspectTVC.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "aspect?.description">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -860,27 +887,24 @@
          contextName = "PollQuestion2VC.tableView(_:heightForRowAt:):PollQuestion2VC.swift">
          <PersistentStrings>
             <PersistentString
-               value = "CGFloat((currentQuestion?.respuestas.count)!)">
-            </PersistentString>
-            <PersistentString
                value = "currentQuestion?.respuestas.count">
             </PersistentString>
             <PersistentString
                value = "width * currentQuestion?.respuestas.count*1.0">
             </PersistentString>
+            <PersistentString
+               value = "CGFloat((currentQuestion?.respuestas.count)!)">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "InvitationDetailVC.viewDidLoad():InvitationDetailVC.swift">
+         contextName = "closure #1 in PollDetailsVC.nextQuestion(_:):PollDetailsVC.swift">
          <PersistentStrings>
             <PersistentString
-               value = "target">
+               value = "pollResponse">
             </PersistentString>
             <PersistentString
-               value = "horarioId">
-            </PersistentString>
-            <PersistentString
-               value = "grupoId">
+               value = "save">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -904,7 +928,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in PollQuestionVC.getPollQuestions():PollQuestionVC.swift">
+         contextName = "InvitationDetailVC.viewDidLoad():InvitationDetailVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "target">
+            </PersistentString>
+            <PersistentString
+               value = "horarioId">
+            </PersistentString>
+            <PersistentString
+               value = "grupoId">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "closure #1 in PollQuestion.init(from:):PollQuestions.swift">
@@ -927,6 +962,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in PollQuestionVC.getPollQuestions():PollQuestionVC.swift">
+      </ContextState>
+      <ContextState
          contextName = "PollQuestion2VC.collectionView(_:didSelectItemAt:):PollQuestion2VC.swift">
          <PersistentStrings>
             <PersistentString
@@ -936,9 +974,6 @@
                value = "cell.alternative.respuestaId">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "RealmService.init():RealmService.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in closure #1 in static PollService.getConfig():PollService.swift">
@@ -952,15 +987,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in PollDetailsVC.nextQuestion(_:):PollDetailsVC.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "pollResponse">
-            </PersistentString>
-            <PersistentString
-               value = "save">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "RealmService.init():RealmService.swift">
       </ContextState>
       <ContextState
          contextName = "InvitationDetailVC.tableView(_:numberOfRowsInSection:):InvitationDetailVC.swift">
@@ -1148,13 +1175,13 @@
          contextName = "CalendarVC.tableView(_:cellForRowAt:):CalendarVC.swift">
          <PersistentStrings>
             <PersistentString
-               value = "schedules[indexPath.row]">
-            </PersistentString>
-            <PersistentString
                value = "schedules">
             </PersistentString>
             <PersistentString
                value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "schedules[indexPath.row]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

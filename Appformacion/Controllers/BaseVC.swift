@@ -46,9 +46,9 @@ class BaseVC: UIViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
-        self.present(nextViewController, animated: true, completion: nil)
+        //self.present(nextViewController, animated: true, completion: nil)
         
-        AlertHelper.notificationAlert(title: "Error", message: "Su sesión ha expirado. Ingrese nuevamente.", viewController: nextViewController)
+        //AlertHelper.notificationAlert(title: "Error", message: "Su sesión ha expirado. Ingrese nuevamente.", viewController: nextViewController)
         
         //safe  present
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginVC{

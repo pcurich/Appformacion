@@ -181,7 +181,8 @@ class DashboardVC : BaseVC{
     }
     
     @objc func showCls(){
-        performSegue(withIdentifier: Constants.SIDEBARMENU.gotoCerrar, sender: nil)
+        close()
+        //performSegue(withIdentifier: Constants.SIDEBARMENU.gotoCerrar, sender: nil)
     }
 }
 
