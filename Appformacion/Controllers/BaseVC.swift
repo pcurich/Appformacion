@@ -44,8 +44,8 @@ class BaseVC: UIViewController {
         
         //https://freakycoder.com/ios-notes-19-how-to-push-and-present-to-viewcontroller-programmatically-how-to-switch-vc-8f8f65b55c7b
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+       // let nextViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
         //self.present(nextViewController, animated: true, completion: nil)
         
         //AlertHelper.notificationAlert(title: "Error", message: "Su sesión ha expirado. Ingrese nuevamente.", viewController: nextViewController)
@@ -64,7 +64,12 @@ class BaseVC: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ContainerVC")
         self.navigationController?.pushViewController(vc, animated: false)
-        
+    }
+    
+    func gotoLogin(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     func setNavegationTitle(title:String) -> UILabel{

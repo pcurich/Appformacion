@@ -52,7 +52,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         Messaging.messaging().shouldEstablishDirectChannel = false
     }
     
-    func applicationWillEnterForeground(_ application: UIApplication) {}
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        UserService.pinMessage(completionHandler: { (response) in
+            if(response){
+                UserDefaults.standard.set(true, forKey: "inSession")
+            }
+            else{
+                UserDefaults.standard.set(false, forKey: "inSession")
+            }
+        })
+    }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         ConnectToFCM()
@@ -99,7 +108,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
         UIApplication.shared.applicationIconBadgeNumber += 1
-        
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "com.DouglasDevlops.BadgeWasUpdated"), object: nil)
     }
     

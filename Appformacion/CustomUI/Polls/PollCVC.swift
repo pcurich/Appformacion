@@ -22,9 +22,9 @@ class PollCVC : UICollectionViewCell  {
         didSet {
             lblAlternativa.text = alternative.value
             if((alternative.value?.count)!<=3){
-                lblAlternativa.font = lblAlternativa.font.withSize(15)
+                lblAlternativa.font = lblAlternativa.font.withSize(17)
             }else{
-                lblAlternativa.font = lblAlternativa.font.withSize(10)
+                lblAlternativa.font = lblAlternativa.font.withSize(14)
             }
             imgFondo.backgroundColor = UIColor.BBVAAQUA()
             questionId = alternative.questionId

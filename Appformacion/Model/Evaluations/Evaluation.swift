@@ -67,7 +67,7 @@ struct EvaluationQuestion : Codable {
     var order        : Int = 0
     var question     : String = ""
     var responseType : String = "" 
-    var responseList : [EvaluationAnswer] = []
+    var responseList : [EvaluationAnswer] = [] 
     
     enum CodingKeys: String, CodingKey {
         case questionId       = "preguntaId"
@@ -89,7 +89,7 @@ struct EvaluationQuestion : Codable {
     init(questionId: Int, question: String,responseList: [EvaluationAnswer]){
         self.questionId = questionId
         self.question = question
-        self.responseList = responseList
+        self.responseList = responseList 
     }
 }
 
@@ -113,8 +113,9 @@ struct EvaluationAnswer  : Codable {
         responseType = try values.decode(String.self, forKey: .responseType)
     }
     
-    init(description: String, responseType : String){
+    init(_ responseId:Int = 0 , _ description: String, _ responseType : String){
         self.description = description
         self.responseType = responseType
+        self.responseId = responseId
     }
 }

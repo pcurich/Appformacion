@@ -57,20 +57,35 @@ class UserService  {
         urlRequest.httpBody = "".data(using: .utf8)!
         
         DefaultAlamofireManager.sharedInstance.request(urlRequest).responseString { (response) in
-            let cookies = HTTPCookieStorage.shared.cookies
-            for cookie in cookies! {
-                debugPrint("name = " + cookie.name + " | " + "value = " + cookie.value )
-            }
             
-            DefaultAlamofireManager.sharedInstance.request(urlRequest).responseString { (response) in
-                
-                if response.result.value != nil {
+            if response.result.value != nil {
+                DispatchQueue.main.async {
+                    completionHandler("OK")
+                }
+            }else{
+                DispatchQueue.main.async {
+                    completionHandler("ERROR")
+                }
+            }
+        }
+    }
+    
+    static func pinMessage(completionHandler: @escaping (Bool) -> ()) {
+        
+        let url = URL(string: Constants.WEBSERVICE.pinMessage)!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.httpBody = "".data(using: .utf8)!
+        
+        DefaultAlamofireManager.sharedInstance.request(urlRequest).responseString { (response) in
+            do{
+                if response.result.value == "1" {
                     DispatchQueue.main.async {
-                        completionHandler("OK")
+                        completionHandler(true)
                     }
                 }else{
                     DispatchQueue.main.async {
-                        completionHandler("ERROR")
+                        completionHandler(false)
                     }
                 }
             }

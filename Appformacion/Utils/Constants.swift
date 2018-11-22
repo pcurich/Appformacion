@@ -18,7 +18,7 @@ struct Constants {
         static let prod = "p"
         static let qugo = "qg"
         
-        static let environment = test
+        static let environment = qugo
         
         static let path_Test = "extranetdev"
         static let path_Cali = "extranetdev"
@@ -41,8 +41,8 @@ struct Constants {
         static let ip_QuGo = "http://\(path):\(port)"
         static let ip_Bbva = "https://\(path).grupobbva.pe:\(port)/\(environment)jboss8485/appformacionbg"
         
-        static let ip = ip_Bbva
-        static let useLogin = true
+        static let ip = ip_QuGo
+        static let useLogin = false
         
         static let login = "https://\(path).grupobbva.pe:\(port)/pkmslogin.form"
         static let logout = "https://\(path).grupobbva.pe:\(port)/pkmslogout.form"
@@ -53,7 +53,7 @@ struct Constants {
         static let enroll = "\(Constants.REST.ip)/enrolarDispositivo"
         static let calendar = "\(Constants.REST.ip)/obtenerCalendario"
         static let dashboard = "\(Constants.REST.ip)/obtenerDashboarInfo"
-        
+        static let pinMessage = "\(Constants.REST.ip)/pinMessage"
         
         static let invitations = "\(Constants.REST.ip)/obtenerInvitacionesActivas"
         static let invitationDetails = "\(Constants.REST.ip)/obtenerSalaDisponibilidadInvitaciones"
@@ -100,7 +100,7 @@ struct Constants {
     }
     
     struct MEDIDAS {
-        static let 	L_LINEAHORIZONTAL = 2.273
+        static let  L_LINEAHORIZONTAL = 2.273
         static let  L_TABLEROPRINCIPAL = 37.879
         static let  L_CAJATEXTO = 6.061
         static let  L_LABELTITULO = 3.030
@@ -115,7 +115,7 @@ struct Constants {
         static let L_LISTACELLL_SCUARE_LEFT  = 2.273
         static let L_LISTACELLL_SCUARE_RIGHT = 2.273
         static let L_LISTACELLL_SCUARE_BUTTO = 2.273
-
+        
         static let LISTACELLL_VIEWHEIGHT = CGFloat(16.67/100)
         
         static let LISTACELLL_TO_SCUARE_TOP = CGFloat(16.67/100)

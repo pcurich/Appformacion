@@ -139,9 +139,6 @@ class DashboardVC : BaseVC{
     }
     
     @objc func showDas(){
-        //performSegue(withIdentifier: Constants.SIDEBARMENU.gotoDashboard, sender: nil)
-        
-        //gotoDashBoard()
     }
     
     @objc func showInv(){
@@ -182,7 +179,6 @@ class DashboardVC : BaseVC{
     
     @objc func showCls(){
         close()
-        //performSegue(withIdentifier: Constants.SIDEBARMENU.gotoCerrar, sender: nil)
     }
 }
 

@@ -27,6 +27,12 @@ class PollDetailsVC: BaseVC {
             }
             
             self.txtQuestion.text = currentQuestion.question
+            
+            if(self.currentQuestion.note?.count ?? 0 > 0){
+               self.lblNote.text = currentQuestion.note
+            }else{
+                self.layoutHeightNote.constant = 0
+            }
             self.collectionView.reloadData()
         }
     }
@@ -36,12 +42,12 @@ class PollDetailsVC: BaseVC {
     
     @IBOutlet weak var lblTitle: UILabel!
     
+    @IBOutlet weak var lblNote: UILabel!
     @IBOutlet weak var lblAspect: UILabel!
     @IBOutlet weak var lblTeacher: UILabel!
     @IBOutlet weak var txtQuestion: UITextView!
-    @IBOutlet weak var detailTitleHeight: NSLayoutConstraint!
-    @IBOutlet weak var detailAspectHeight: NSLayoutConstraint! 
     @IBOutlet weak var layoutHeightTeacher: NSLayoutConstraint!
+    @IBOutlet weak var layoutHeightNote: NSLayoutConstraint!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -49,7 +55,6 @@ class PollDetailsVC: BaseVC {
     @IBOutlet weak var previousBarButton: UIBarButtonItem!
     @IBOutlet weak var txtSuggestion: UITextView!
     
-    @IBOutlet weak var stack: UIStackView!
     @IBOutlet weak var suggestionHeight: NSLayoutConstraint!
     @IBOutlet weak var alternativeHeight: NSLayoutConstraint!
     
@@ -61,11 +66,6 @@ class PollDetailsVC: BaseVC {
         indexQuestion = 0
         lblTitle.text = detailTitle
         currentQuestion = pollAspect?.questions[indexQuestion]
-        detailTitleHeight.constant = UIScreen.main.bounds.size.height * 0.2246
-        detailAspectHeight.constant = UIScreen.main.bounds.size.height * 0.270
-        //self.navigationController?.isNavigationBarHidden = true
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
         startView()
         
     }
@@ -76,13 +76,13 @@ class PollDetailsVC: BaseVC {
         setupNib()
         cleanTitle()
         stopIndicator()
-        
+        let stack = alternativeHeight.constant + suggestionHeight.constant
         if(currentQuestion.responseList.count == 1){
             alternativeHeight.constant = 0
-            suggestionHeight.constant = stack.frame.height
+            suggestionHeight.constant = stack
         }else{
             suggestionHeight.constant = 0
-            alternativeHeight.constant = stack.frame.height
+            alternativeHeight.constant = stack
         }
         
     }

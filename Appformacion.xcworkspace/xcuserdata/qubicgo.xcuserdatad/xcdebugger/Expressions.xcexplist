@@ -156,6 +156,9 @@
          contextName = "PollDetailsVC.startView():PollDetailsVC.swift">
          <PersistentStrings>
             <PersistentString
+               value = "currentQuestion.responseList.count">
+            </PersistentString>
+            <PersistentString
                value = "stack.frame.height">
             </PersistentString>
          </PersistentStrings>
@@ -175,13 +178,13 @@
          contextName = "closure #1 in closure #1 in static PollService.getPolls(register:completionHandler:):PollService.swift">
          <PersistentStrings>
             <PersistentString
-               value = "polls.body![poll].aspects[aspect].questions">
+               value = "polls.body">
             </PersistentString>
             <PersistentString
                value = "t_aspect.resposeType">
             </PersistentString>
             <PersistentString
-               value = "polls.body">
+               value = "polls.body![poll].aspects[aspect].questions">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -197,13 +200,13 @@
          contextName = "PollQuestionVC.tableView(_:willDisplay:forRowAt:):PollQuestionVC.swift">
          <PersistentStrings>
             <PersistentString
-               value = "currentAspect.aspectoDetalle">
+               value = "currentAspect?.elementos!.count">
             </PersistentString>
             <PersistentString
                value = "indexPath.row">
             </PersistentString>
             <PersistentString
-               value = "currentAspect?.elementos!.count">
+               value = "currentAspect.aspectoDetalle">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -307,13 +310,27 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in closure #2 in EvaluationDetailsVC.nextQuestion(_:):EvaluationDetailsVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.badAnswer">
+            </PersistentString>
+            <PersistentString
+               value = "self.goodAnswer">
+            </PersistentString>
+            <PersistentString
+               value = "self.evaluationResponse">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ActivityDetailVC.tableView(_:cellForRowAt:):ActivityDetailVC.swift">
          <PersistentStrings>
             <PersistentString
-               value = " cell.lblTitle">
+               value = "details[indexPath.row]">
             </PersistentString>
             <PersistentString
-               value = "details[indexPath.row]">
+               value = " cell.lblTitle">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -407,6 +424,14 @@
          contextName = "objc_exception_rethrow:(null)">
       </ContextState>
       <ContextState
+         contextName = "closure #1 in static UserService.pinMessage(completionHandler:):UserService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "MaterialVC.collectionView(_:cellForItemAt:):MaterialVC.swift">
          <PersistentStrings>
             <PersistentString
@@ -435,6 +460,14 @@
       </ContextState>
       <ContextState
          contextName = "static PollService.createPollAspectFromList(listOfData:):PollService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "EvaluationDetailsVC.getBadAnswer():EvaluationDetailsVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.evaluationAspect?.questions">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "PollDetailVC.tableView(_:cellForRowAt:):PollDetailVC.swift">
@@ -539,6 +572,9 @@
             </PersistentString>
             <PersistentString
                value = "dashboards">
+            </PersistentString>
+            <PersistentString
+               value = "register">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -673,13 +709,13 @@
          contextName = "DetailCalendarTVC.fechaValue.didset:DetailCalendarTVC.swift">
          <PersistentStrings>
             <PersistentString
-               value = "fechaValue">
+               value = "titleLabel.text">
             </PersistentString>
             <PersistentString
                value = "fechaValue.grupoNombre!">
             </PersistentString>
             <PersistentString
-               value = "titleLabel.text">
+               value = "fechaValue">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -770,6 +806,9 @@
                value = "JSON(self.evaluationResponse)">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in EvaluationDetailsVC.nextQuestion(_:):EvaluationDetailsVC.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in static PollService.save(grupoPersonaId:scheduleId:respuestaEncuesta:completionHandler:):PollService.swift">
@@ -887,13 +926,13 @@
          contextName = "PollQuestion2VC.tableView(_:heightForRowAt:):PollQuestion2VC.swift">
          <PersistentStrings>
             <PersistentString
+               value = "CGFloat((currentQuestion?.respuestas.count)!)">
+            </PersistentString>
+            <PersistentString
                value = "currentQuestion?.respuestas.count">
             </PersistentString>
             <PersistentString
                value = "width * currentQuestion?.respuestas.count*1.0">
-            </PersistentString>
-            <PersistentString
-               value = "CGFloat((currentQuestion?.respuestas.count)!)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -1147,6 +1186,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "EvaluationDetailsVC.getGoodAnswer():EvaluationDetailsVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " self.evaluationAspect?.questions">
+            </PersistentString>
+            <PersistentString
+               value = "r.isSelected">
+            </PersistentString>
+            <PersistentString
+               value = "r.description">
+            </PersistentString>
+            <PersistentString
+               value = "r.responseType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "PollDetailVC.tableView(_:numberOfRowsInSection:):PollDetailVC.swift">
          <PersistentStrings>
             <PersistentString
@@ -1175,13 +1231,13 @@
          contextName = "CalendarVC.tableView(_:cellForRowAt:):CalendarVC.swift">
          <PersistentStrings>
             <PersistentString
+               value = "schedules[indexPath.row]">
+            </PersistentString>
+            <PersistentString
                value = "schedules">
             </PersistentString>
             <PersistentString
                value = "indexPath.row">
-            </PersistentString>
-            <PersistentString
-               value = "schedules[indexPath.row]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -19,7 +19,15 @@ class LoginVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.BBVAMEDIUMBLUE()
-        //self.btnLogin.backgroundColor = UIColor.BBVADARKAQUA()
+        
+        let result = UserDefaults.standard.bool(forKey: "inSession")
+        if(result){
+            self.gotoDashBoard()
+        }else{
+            self.gotoLogin()
+        }
+        
+        UserDefaults.standard.removeObject(forKey: "inSession")
     }
     
     @IBAction func login(_ sender: UIButton) {
@@ -78,7 +86,6 @@ class LoginVC: BaseVC {
     
     
     func doLogout(){
-        
         UserService.processLogout(completionHandler: {
             (response) in
             

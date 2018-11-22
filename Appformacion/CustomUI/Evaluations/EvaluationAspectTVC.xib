@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,46 +17,35 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EvaluationAspectTVC" id="V47-VK-FS0" customClass="EvaluationAspectTVC" customModule="Appformacion" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EvaluationAspectTVC" rowHeight="173" id="V47-VK-FS0" customClass="EvaluationAspectTVC" customModule="Appformacion" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="556" height="173"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V47-VK-FS0" id="KyA-nd-R4h">
-                <rect key="frame" x="0.0" y="0.0" width="341" height="73.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="518" height="172.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UV-Ay-KIi">
-                        <rect key="frame" x="0.0" y="0.0" width="341" height="73.5"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KMc-HR-f6I">
-                                <rect key="frame" x="80" y="15" width="43.5" height="43.5"/>
-                                <color key="backgroundColor" name="6_BBVA400"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="KMc-HR-f6I" secondAttribute="height" multiplier="1:1" id="FPh-HO-8N1"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpB-AA-C2G">
-                                <rect key="frame" x="133.5" y="15" width="197.5" height="18"/>
-                                <fontDescription key="fontDescription" name="BentonSansBBVA-Book" family="Benton Sans BBVA" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KMc-HR-f6I">
+                        <rect key="frame" x="50" y="79" width="15" height="15"/>
+                        <color key="backgroundColor" name="1_BBVANAVY"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="KMc-HR-f6I" secondAttribute="bottom" constant="15" id="RLs-Qy-3Wg"/>
-                            <constraint firstItem="FpB-AA-C2G" firstAttribute="top" secondItem="7UV-Ay-KIi" secondAttribute="top" constant="15" id="Rss-tM-hgx"/>
-                            <constraint firstItem="KMc-HR-f6I" firstAttribute="centerY" secondItem="7UV-Ay-KIi" secondAttribute="centerY" id="XuY-BL-bYn"/>
-                            <constraint firstItem="KMc-HR-f6I" firstAttribute="leading" secondItem="7UV-Ay-KIi" secondAttribute="leading" constant="80" id="Zj5-3k-oAO"/>
-                            <constraint firstAttribute="trailing" secondItem="FpB-AA-C2G" secondAttribute="trailing" constant="10" id="qYh-Qd-Im6"/>
-                            <constraint firstItem="FpB-AA-C2G" firstAttribute="leading" secondItem="KMc-HR-f6I" secondAttribute="trailing" constant="10" id="tVI-MT-uTB"/>
+                            <constraint firstAttribute="height" constant="15" id="3KY-0K-f3h"/>
+                            <constraint firstAttribute="width" secondItem="KMc-HR-f6I" secondAttribute="height" multiplier="1:1" id="8kF-LX-LSA"/>
+                            <constraint firstAttribute="width" constant="15" id="Kf1-4F-1Fc"/>
                         </constraints>
-                    </view>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpB-AA-C2G">
+                        <rect key="frame" x="75" y="77.5" width="433" height="18"/>
+                        <fontDescription key="fontDescription" name="BentonSansBBVA-Book" family="Benton Sans BBVA" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="7UV-Ay-KIi" secondAttribute="trailing" id="ZQR-Bn-U3p"/>
-                    <constraint firstItem="7UV-Ay-KIi" firstAttribute="top" secondItem="KyA-nd-R4h" secondAttribute="top" id="cC7-cS-Z3H"/>
-                    <constraint firstAttribute="bottom" secondItem="7UV-Ay-KIi" secondAttribute="bottom" id="hbu-ax-Mtj"/>
-                    <constraint firstItem="7UV-Ay-KIi" firstAttribute="leading" secondItem="KyA-nd-R4h" secondAttribute="leading" id="xnb-fG-GDS"/>
+                    <constraint firstItem="FpB-AA-C2G" firstAttribute="leading" secondItem="KMc-HR-f6I" secondAttribute="trailing" constant="10" id="6X5-ju-qkF"/>
+                    <constraint firstAttribute="trailing" secondItem="FpB-AA-C2G" secondAttribute="trailing" constant="10" id="cXx-Y9-hkE"/>
+                    <constraint firstItem="KMc-HR-f6I" firstAttribute="centerY" secondItem="KyA-nd-R4h" secondAttribute="centerY" id="f2l-nz-xEu"/>
+                    <constraint firstItem="KMc-HR-f6I" firstAttribute="leading" secondItem="KyA-nd-R4h" secondAttribute="leading" constant="50" id="oqq-eA-t3g"/>
+                    <constraint firstItem="FpB-AA-C2G" firstAttribute="centerY" secondItem="KyA-nd-R4h" secondAttribute="centerY" id="rj1-3G-e0n"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,12 +53,12 @@
                 <outlet property="imgCircle" destination="KMc-HR-f6I" id="Ccb-H9-nwS"/>
                 <outlet property="lblAspect" destination="FpB-AA-C2G" id="Sss-MT-l2P"/>
             </connections>
-            <point key="canvasLocation" x="237" y="-9"/>
+            <point key="canvasLocation" x="91.200000000000003" y="34.632683658170919"/>
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="6_BBVA400">
-            <color red="0.74099999670000005" green="0.74099999670000005" blue="0.74099999670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="1_BBVANAVY">
+            <color red="0.090999998152256012" green="0.14800000190734863" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

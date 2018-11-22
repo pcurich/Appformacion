@@ -99,7 +99,6 @@ class EvaluationResultVC:  BaseVC {
 extension EvaluationResultVC : UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("currentResponse.count"+"\(currentResponse.count)")
         return currentResponse.count
     }
     
@@ -121,7 +120,6 @@ extension EvaluationResultVC : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Pedro numberOfRowsInSection " +  "\(currentResponse[section].responseList.count)")
         return (currentResponse[section].responseList.count)
     }
     
@@ -129,7 +127,6 @@ extension EvaluationResultVC : UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! EvaluationResultTVC
         let alternative = currentResponse[indexPath.section].responseList[indexPath.row]
         cell.type = alternative.responseType
-        print("Pedro alternative.responseType" + alternative.responseType)
         cell.alternativa.text = alternative.description
         return cell
     }
