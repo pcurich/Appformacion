@@ -54,9 +54,10 @@ class PollService {
         }
     }
     
-    static func save(grupoPersonaId: Int,scheduleId: Int,respuestaEncuesta: String, completionHandler: @escaping (Result) -> ()) {
+    static func save(grupoPersonaId: Int,scheduleId: Int, teacherId : Int ,respuestaEncuesta: String, completionHandler: @escaping (Result) -> ()) {
         let headers = ["grupoPersonaId": "\(grupoPersonaId)",
             "scheduleId": "\(scheduleId)",
+            "expositorId": "\(teacherId)",
             "respuestaEncuesta" : String(respuestaEncuesta.filter { !"\n\t\r".contains($0) }) ]
         
         let url = URL(string: Constants.WEBSERVICE.pollResponse)

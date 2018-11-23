@@ -134,7 +134,10 @@ class PollDetailsVC: BaseVC {
                     let data = try! encoder.encode(self.pollResponse)
                     let string = String(data: data, encoding: .utf8)!
                     
-                    PollService.save(grupoPersonaId: self.groupPersonId , scheduleId: (self.pollAspect?.scheduleId)!, respuestaEncuesta: string, completionHandler: { (response) in
+                    PollService.save(grupoPersonaId: self.groupPersonId ,
+                                     scheduleId: (self.pollAspect?.scheduleId)!,
+                                     teacherId: (self.pollAspect?.teacherId ?? 0),
+                                     respuestaEncuesta: string, completionHandler: { (response) in
                         
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: "ContainerVC") as! ContainerVC
