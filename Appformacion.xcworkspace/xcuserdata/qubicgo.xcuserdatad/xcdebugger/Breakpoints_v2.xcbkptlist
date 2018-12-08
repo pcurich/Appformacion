@@ -74,60 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Appformacion/Controllers/EvaluationDetailsVC.swift"
-            timestampString = "564521454.9388911"
+            timestampString = "565979271.781969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "nextQuestion(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Appformacion.Result) -&gt; () in closure #2 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in Appformacion.EvaluationDetailsVC.nextQuestion(Any) -&gt; ()"
-                  moduleName = "Appformacion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qubicgo/Documents/GitHub/Appformacion.IOS/Appformacion/Controllers/EvaluationDetailsVC.swift"
-                  timestampString = "564458212.408615"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "452">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Appformacion.Result) -&gt; () in closure #2 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in Appformacion.EvaluationDetailsVC.nextQuestion(Any) -&gt; ()"
-                  moduleName = "Appformacion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qubicgo/Documents/GitHub/Appformacion.IOS/Appformacion/Controllers/EvaluationDetailsVC.swift"
-                  timestampString = "564458212.412307"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "1316">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Appformacion/Controllers/EvaluationDetailsVC.swift"
-            timestampString = "564521454.940976"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "getBadAnswer()"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "getGoodAnswer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -138,39 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Appformacion/Controllers/EvaluationDetailsVC.swift"
-            timestampString = "564521454.941326"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "nextQuestion(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Appformacion/Controllers/EvaluationDetailsVC.swift"
-            timestampString = "564521454.941494"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
-            landmarkName = "CreateResponse()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Appformacion/Controllers/EvaluationDetailsVC.swift"
-            timestampString = "564521454.941678"
+            timestampString = "565979271.782477"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "195"
@@ -186,7 +106,7 @@
                   moduleName = "Appformacion"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qubicgo/Documents/GitHub/Appformacion.IOS/Appformacion/Controllers/EvaluationDetailsVC.swift"
-                  timestampString = "564458212.452845"
+                  timestampString = "565979054.715384"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "195"
@@ -201,14 +121,94 @@
                   moduleName = "Appformacion"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qubicgo/Documents/GitHub/Appformacion.IOS/Appformacion/Controllers/EvaluationDetailsVC.swift"
-                  timestampString = "564458212.4578871"
+                  timestampString = "565979054.719329"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "195"
                   endingLineNumber = "195"
-                  offsetFromSymbolStart = "5320">
+                  offsetFromSymbolStart = "5360">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appformacion/Controllers/EvaluationDetailsVC.swift"
+            timestampString = "565979271.7827801"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "getBadAnswer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appformacion/Controllers/EvaluationDetailsVC.swift"
+            timestampString = "565979271.7830631"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "getBadAnswer()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Appformacion.EvaluationDetailsVC.getBadAnswer() -&gt; Swift.Array&lt;Appformacion.EvaluationQuestion&gt;"
+                  moduleName = "Appformacion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/qubicgo/Documents/GitHub/Appformacion.IOS/Appformacion/Controllers/EvaluationDetailsVC.swift"
+                  timestampString = "565979066.867177"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Appformacion.EvaluationDetailsVC.getBadAnswer() -&gt; Swift.Array&lt;Appformacion.EvaluationQuestion&gt;"
+                  moduleName = "Appformacion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/qubicgo/Documents/GitHub/Appformacion.IOS/Appformacion/Controllers/EvaluationDetailsVC.swift"
+                  timestampString = "565979066.870243"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "4892">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appformacion/Controllers/EvaluationDetailsVC.swift"
+            timestampString = "565979271.783336"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "getGoodAnswer()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

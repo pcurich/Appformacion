@@ -191,7 +191,7 @@ class EvaluationDetailsVC: BaseVC {
         
         var good = [EvaluationQuestion]()
         var listToMarkToDelete = [Int]()
-    
+        
         for q in (self.evaluationAspect?.questions)!{
             
             var alternative = [EvaluationAnswer]()
@@ -212,11 +212,12 @@ class EvaluationDetailsVC: BaseVC {
                         alternative.append(EvaluationAnswer(r.responseId, r.description + " (Correcto)", r.responseType))
                     }
                 }
-                
-                for r in q.responseList {
-                    if (r.responseType=="RPTA_INC" && r.isSelected)
-                    {
-                        alternative.append(EvaluationAnswer(r.responseId, r.description + " (Correcto)", r.responseType))
+                if (alternative.count > 1){
+                    for r in q.responseList {
+                        if (r.responseType=="RPTA_INC" && r.isSelected)
+                        {
+                            alternative.append(EvaluationAnswer(r.responseId, r.description + " (Correcto)", r.responseType))
+                        }
                     }
                 }
                 
